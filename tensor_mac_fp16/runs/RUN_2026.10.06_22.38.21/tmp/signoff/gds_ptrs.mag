@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 60000 60000
+string GDS_END 3030968
+string GDS_FILE /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/results/signoff/tensor_mac_fp16.magic.gds
+string GDS_START 681324
+<< end >>

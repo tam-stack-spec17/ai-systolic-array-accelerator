@@ -1,0 +1,5 @@
+Warning: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/results/routing/tensor_mac_fp16.nl.v line 3410, module sky130_fd_sc_hd__tapvpwrvgnd_1 not found. Creating black box for TAP_204.
+Warning: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/results/routing/tensor_mac_fp16.nl.v line 4698, module sky130_ef_sc_hd__decap_12 not found. Creating black box for FILLER_0_0_9.
+Warning: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/results/routing/tensor_mac_fp16.nl.v line 4700, module sky130_fd_sc_hd__fill_1 not found. Creating black box for FILLER_0_0_27.
+Warning: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/results/routing/tensor_mac_fp16.nl.v line 4704, module sky130_fd_sc_hd__fill_2 not found. Creating black box for FILLER_0_0_54.
+[WARNING] Did not save OpenROAD database!

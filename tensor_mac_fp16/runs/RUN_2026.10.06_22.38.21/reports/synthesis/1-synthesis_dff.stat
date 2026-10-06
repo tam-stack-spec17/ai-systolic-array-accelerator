@@ -1,0 +1,25 @@
+
+53. Printing statistics.
+
+=== tensor_mac_fp16 ===
+
+   Number of wires:                761
+   Number of wire bits:            821
+   Number of public wires:           6
+   Number of public wire bits:      51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                786
+     $_ANDNOT_                     200
+     $_AND_                         91
+     $_MUX_                         14
+     $_NAND_                        35
+     $_NOR_                         41
+     $_NOT_                         42
+     $_ORNOT_                       51
+     $_OR_                          56
+     $_XNOR_                        67
+     $_XOR_                        173
+     sky130_fd_sc_hd__dfrtp_2       16
+

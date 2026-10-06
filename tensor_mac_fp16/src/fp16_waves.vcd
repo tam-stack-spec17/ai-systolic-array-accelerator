@@ -1,0 +1,88 @@
+$date
+	Tue Oct  6 22:47:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_tensor_mac_fp16 $end
+$var wire 16 ! result [15:0] $end
+$var reg 16 " activation [15:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$var reg 16 % weight [15:0] $end
+$scope module uut $end
+$var wire 16 & activation [15:0] $end
+$var wire 1 # clk $end
+$var wire 1 ' res_sign $end
+$var wire 1 $ reset $end
+$var wire 16 ( weight [15:0] $end
+$var wire 1 ) w_sign $end
+$var wire 11 * w_frac [10:0] $end
+$var wire 5 + w_exp [4:0] $end
+$var wire 22 , res_frac [21:0] $end
+$var wire 6 - res_exp [5:0] $end
+$var wire 1 . a_sign $end
+$var wire 11 / a_frac [10:0] $end
+$var wire 5 0 a_exp [4:0] $end
+$var reg 16 1 result [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 1
+b0 0
+b10000000000 /
+0.
+b110001 -
+b100000000000000000000 ,
+b0 +
+b10000000000 *
+0)
+b0 (
+0'
+b0 &
+b0 %
+1$
+0#
+b0 "
+b0 !
+$end
+#5000
+1#
+#10000
+0#
+0$
+#15000
+b100010000000000 !
+b100010000000000 1
+b10000 0
+b10000 -
+b1111 +
+b110000000000000000000 ,
+b11000000000 *
+b100000000000000 "
+b100000000000000 &
+b11111000000000 %
+b11111000000000 (
+1#
+#20000
+0#
+#25000
+b100001000000000 !
+b100001000000000 1
+1#
+#30000
+0#
+#35000
+1#
+#40000
+0#
+#45000
+1#

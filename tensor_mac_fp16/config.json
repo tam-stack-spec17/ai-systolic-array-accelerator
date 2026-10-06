@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "tensor_mac_fp16",
+    "VERILOG_FILES": "dir::src/tensor_mac_fp16.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 300 300",
+    "PL_TARGET_DENSITY": 0.50
+}

@@ -1,0 +1,19 @@
+Design Name: tensor_mac_fp16
+Run Directory: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/logs/signoff/39-tensor_mac_fp16.lef.lvs.log
+Number of nets: 789                        |Number of nets: 789                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/runs/RUN_2026.10.06_22.38.21/logs/signoff/41-arc.log
+Pin violations: 6
+Net violations: 6

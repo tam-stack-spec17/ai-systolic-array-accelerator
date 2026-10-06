@@ -1,0 +1,10 @@
+%Warning-UNUSEDSIGNAL: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/src/tensor_mac_fp16.v:19:16: Bits of signal are not used: 'res_exp'[5]
+                                                                                                         : ... In instance tensor_mac_fp16
+   19 |     wire [5:0] res_exp = w_exp + a_exp - 5'd15;      
+      |                ^~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.009
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /home/taman/vlsi-accelerator-portfolio/tensor_mac_fp16/src/tensor_mac_fp16.v:20:17: Bits of signal are not used: 'res_frac'[9:0]
+                                                                                                         : ... In instance tensor_mac_fp16
+   20 |     wire [21:0] res_frac = w_frac * a_frac;          
+      |                 ^~~~~~~~
