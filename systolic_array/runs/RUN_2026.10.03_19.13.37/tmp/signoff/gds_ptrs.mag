@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 160000 160000
+string GDS_END 23985730
+string GDS_FILE /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/results/signoff/systolic_array.magic.gds
+string GDS_START 711902
+<< end >>

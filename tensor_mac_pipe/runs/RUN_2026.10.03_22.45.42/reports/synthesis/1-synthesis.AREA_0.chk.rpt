@@ -1,0 +1,20 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module tensor_mac_pipe...
+Warning: Wire tensor_mac_pipe.\accumulator [15] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [14] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [13] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [12] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [11] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [10] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [9] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [8] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [7] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [6] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [5] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [4] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [3] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [2] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [1] is used but has no driver.
+Warning: Wire tensor_mac_pipe.\accumulator [0] is used but has no driver.
+Found and reported 16 problems.

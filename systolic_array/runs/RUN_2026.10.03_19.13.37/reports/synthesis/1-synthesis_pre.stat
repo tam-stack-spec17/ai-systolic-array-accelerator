@@ -1,0 +1,24 @@
+
+47. Printing statistics.
+
+=== systolic_array ===
+
+   Number of wires:               6901
+   Number of wire bits:           8796
+   Number of public wires:          29
+   Number of public wire bits:     514
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7482
+     $_ANDNOT_                    2022
+     $_AND_                        778
+     $_DFF_PP0_                    448
+     $_NAND_                       568
+     $_NOR_                        160
+     $_NOT_                        192
+     $_ORNOT_                      193
+     $_OR_                         783
+     $_XNOR_                       509
+     $_XOR_                       1829
+

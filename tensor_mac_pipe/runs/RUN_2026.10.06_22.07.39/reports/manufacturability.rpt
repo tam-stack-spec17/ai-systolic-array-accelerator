@@ -1,0 +1,19 @@
+Design Name: tensor_mac_pipe
+Run Directory: /openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/logs/signoff/39-tensor_mac_pipe.lef.lvs.log
+Number of nets: 553                        |Number of nets: 553                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/logs/signoff/41-arc.log
+Pin violations: 0
+Net violations: 0

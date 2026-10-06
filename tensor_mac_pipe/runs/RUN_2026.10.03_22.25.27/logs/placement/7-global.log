@@ -1,0 +1,46 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.03_22.25.27/results/floorplan/tensor_mac_pipe.odb'…
+define_corners Typical
+read_liberty -corner Typical /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.03_22.25.27/tmp/floorplan/3-initial_fp.sdc'…
+[INFO]: Setting RC values...
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 94300 87040
+[INFO GPL-0006] NumInstances: 622
+[INFO GPL-0007] NumPlaceInstances: 476
+[INFO GPL-0008] NumFixedInstances: 146
+[INFO GPL-0009] NumDummyInstances: 0
+[INFO GPL-0010] NumNets: 494
+[INFO GPL-0011] NumPins: 1688
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 100000 100000
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 94300 87040
+[INFO GPL-0016] CoreArea: 6761484800
+[INFO GPL-0017] NonPlaceInstsArea: 322809600
+[INFO GPL-0018] PlaceInstsArea: 4890940800
+[INFO GPL-0019] Util(%): 75.96
+[INFO GPL-0020] StdInstsArea: 4890940800
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000010 HPWL: 7295060
+[InitialPlace]  Iter: 2 CG residual: 0.00000011 HPWL: 6814433
+[InitialPlace]  Iter: 3 CG residual: 0.00000010 HPWL: 6854057
+[InitialPlace]  Iter: 4 CG residual: 0.00000008 HPWL: 6887633
+[InitialPlace]  Iter: 5 CG residual: 0.00000009 HPWL: 6893661
+[ERROR GPL-0302] Use a higher -density or re-floorplan with a larger core area.
+Given target density: 0.50
+Suggested target density: 0.76
+Error: gpl.tcl, 71 GPL-0302

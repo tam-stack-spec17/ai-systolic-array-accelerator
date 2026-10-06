@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 30000 30000
+string GDS_END 1835208
+string GDS_FILE /openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.03_22.45.42/results/signoff/tensor_mac_pipe.magic.gds
+string GDS_START 488886
+<< end >>

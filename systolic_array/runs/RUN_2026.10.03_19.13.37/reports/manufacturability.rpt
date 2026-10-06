@@ -1,0 +1,19 @@
+Design Name: systolic_array
+Run Directory: /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/logs/signoff/39-systolic_array.lef.lvs.log
+Number of nets: 7800                       |Number of nets: 7800                       
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/logs/signoff/41-arc.log
+Pin violations: 81
+Net violations: 77

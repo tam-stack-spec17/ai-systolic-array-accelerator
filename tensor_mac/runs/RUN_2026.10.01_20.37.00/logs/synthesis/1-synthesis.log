@@ -1,0 +1,936 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/tensor_mac/src/tensor_mac.v
+Parsing SystemVerilog input from `/openlane/designs/tensor_mac/src/tensor_mac.v' to AST representation.
+Generating RTLIL representation for module `\tensor_mac'.
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/hierarchy.dot'.
+Dumping module tensor_mac to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \tensor_mac
+
+3.2. Analyzing design hierarchy..
+Top module:  \tensor_mac
+Removed 0 unused modules.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \tensor_mac
+
+5.2. Analyzing design hierarchy..
+Top module:  \tensor_mac
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/tensor_mac/src/tensor_mac.v:8$1 in module tensor_mac.
+Removed a total of 0 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 0 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\tensor_mac.$proc$/openlane/designs/tensor_mac/src/tensor_mac.v:8$1'.
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tensor_mac.$proc$/openlane/designs/tensor_mac/src/tensor_mac.v:8$1'.
+     1/1: $0\accumulator[15:0]
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tensor_mac.\accumulator' using process `\tensor_mac.$proc$/openlane/designs/tensor_mac/src/tensor_mac.v:8$1'.
+  created $adff cell `$procdff$4' with positive edge clock and positive level reset.
+
+15. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+16. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `tensor_mac.$proc$/openlane/designs/tensor_mac/src/tensor_mac.v:8$1'.
+Cleaned up 0 empty switches.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module tensor_mac...
+Found and reported 0 problems.
+
+18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+19. Executing FLATTEN pass (flatten design).
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+22. Executing OPT pass (performing simple optimizations).
+
+22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+22.9. Finished OPT passes. (There is nothing left to do.)
+
+23. Executing FSM pass (extract and optimize FSM).
+
+23.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+23.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+23.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+23.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+23.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+23.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+24.9. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing WREDUCE pass (reducing word size of cells).
+
+26. Executing PEEPOPT pass (run peephole optimizers).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+28. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module tensor_mac:
+  creating $macc model for $add$/openlane/designs/tensor_mac/src/tensor_mac.v:12$3 ($add).
+  creating $macc model for $mul$/openlane/designs/tensor_mac/src/tensor_mac.v:12$2 ($mul).
+  merging $macc model for $mul$/openlane/designs/tensor_mac/src/tensor_mac.v:12$2 into $add$/openlane/designs/tensor_mac/src/tensor_mac.v:12$3.
+  creating $macc cell for $add$/openlane/designs/tensor_mac/src/tensor_mac.v:12$3: $auto$alumacc.cc:365:replace_macc$5
+  created 0 $alu and 1 $macc cells.
+
+29. Executing SHARE pass (SAT-based resource sharing).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+30.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+30.16. Finished OPT passes. (There is nothing left to do.)
+
+31. Executing MEMORY pass.
+
+31.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+31.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+31.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+31.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+31.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+31.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+31.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+31.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+31.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+31.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+33.5. Finished fast OPT passes.
+
+34. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_SHARE pass.
+
+35.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+35.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+35.10. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing TECHMAP pass (map to technology primitives).
+
+36.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+36.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc.
+  add \accumulator (16 bits, unsigned)
+  add \weight * \activation (8x8 bits, unsigned)
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+No more expansions possible.
+<suppressed ~350 debug messages>
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+<suppressed ~377 debug messages>
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+37.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+Removed 30 unused cells and 119 unused wires.
+<suppressed ~31 debug messages>
+
+37.5. Finished fast OPT passes.
+
+38. Executing ABC pass (technology mapping using ABC).
+
+38.1. Extracting gate netlist of module `\tensor_mac' to `<abc-temp-dir>/input.blif'..
+Extracted 427 gates and 459 wires to a netlist network with 32 inputs and 16 outputs.
+
+38.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+38.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       12
+ABC RESULTS:              NAND cells:       35
+ABC RESULTS:              XNOR cells:       32
+ABC RESULTS:               AND cells:       50
+ABC RESULTS:             ORNOT cells:       12
+ABC RESULTS:                OR cells:       48
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:            ANDNOT cells:      126
+ABC RESULTS:               XOR cells:      114
+ABC RESULTS:        internal signals:      411
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+Removed 0 unused cells and 114 unused wires.
+<suppressed ~1 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing HIERARCHY pass (managing design hierarchy).
+
+40.1. Analyzing design hierarchy..
+Top module:  \tensor_mac
+
+40.2. Analyzing design hierarchy..
+Top module:  \tensor_mac
+Removed 0 unused modules.
+
+41. Printing statistics.
+
+=== tensor_mac ===
+
+   Number of wires:                434
+   Number of wire bits:            553
+   Number of public wires:           5
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                455
+     $_ANDNOT_                     126
+     $_AND_                         50
+     $_DFF_PP0_                     16
+     $_NAND_                        35
+     $_NOR_                         10
+     $_NOT_                         12
+     $_ORNOT_                       12
+     $_OR_                          48
+     $_XNOR_                        32
+     $_XOR_                        114
+
+42. Executing CHECK pass (checking for obvious problems).
+Checking module tensor_mac...
+Found and reported 0 problems.
+
+43. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/post_techmap.dot'.
+Dumping module tensor_mac to page 1.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT pass (performing simple optimizations).
+
+45.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+45.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+45.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tensor_mac..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tensor_mac.
+Performed a total of 0 changes.
+
+45.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tensor_mac'.
+Removed a total of 0 cells.
+
+45.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+45.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tensor_mac.
+
+45.9. Finished OPT passes. (There is nothing left to do.)
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+
+47. Printing statistics.
+
+=== tensor_mac ===
+
+   Number of wires:                434
+   Number of wire bits:            553
+   Number of public wires:           5
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                455
+     $_ANDNOT_                     126
+     $_AND_                         50
+     $_DFF_PP0_                     16
+     $_NAND_                        35
+     $_NOR_                         10
+     $_NOT_                         12
+     $_ORNOT_                       12
+     $_OR_                          48
+     $_XNOR_                        32
+     $_XOR_                        114
+
+mapping tbuf
+
+48. Executing TECHMAP pass (map to technology primitives).
+
+48.1. Executing Verilog-2005 frontend: /home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+48.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+49. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+52. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+52.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\tensor_mac':
+  mapped 16 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+
+53. Printing statistics.
+
+=== tensor_mac ===
+
+   Number of wires:                450
+   Number of wire bits:            569
+   Number of public wires:           5
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                471
+     $_ANDNOT_                     126
+     $_AND_                         50
+     $_NAND_                        35
+     $_NOR_                         10
+     $_NOT_                         28
+     $_ORNOT_                       12
+     $_OR_                          48
+     $_XNOR_                        32
+     $_XOR_                        114
+     sky130_fd_sc_hd__dfrtp_2       16
+
+[INFO]: USING STRATEGY AREA 0
+
+54. Executing ABC pass (technology mapping using ABC).
+
+54.1. Extracting gate netlist of module `\tensor_mac' to `/tmp/yosys-abc-KKoR7b/input.blif'..
+Extracted 455 gates and 488 wires to a netlist network with 33 inputs and 32 outputs.
+
+54.1.1. Executing ABC.
+Running ABC command: "/build/bin/yosys-abc" -s -f /tmp/yosys-abc-KKoR7b/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-KKoR7b/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-KKoR7b/input.blif 
+ABC: + read_lib -w /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.06 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130A_merged" from "/openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.09 sec
+ABC: Memory =    9.54 MB. Time =     0.09 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + retime -D -D 10000.0 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000.0 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer -N 10 -S 750.0 
+ABC: + upsize -D 10000.0 
+ABC: Current delay (4678.20 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000.0 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =    406 ( 10.6 %)   Cap = 11.1 ff (  1.9 %)   Area =     3843.69 ( 89.4 %)   Delay =  4866.59 ps  (  4.4 %)               
+ABC: Path  0 --      13 : 0    7 pi                        A =   0.00  Df =  55.5  -30.6 ps  S =  83.1 ps  Cin =  0.0 ff  Cout =  16.8 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     180 : 1   10 sky130_fd_sc_hd__buf_1    A =   3.75  Df = 355.7 -141.8 ps  S = 347.1 ps  Cin =  2.1 ff  Cout =  29.1 ff  Cmax = 130.0 ff  G = 1338  
+ABC: Path  2 --     181 : 4    4 sky130_fd_sc_hd__or4bb_2  A =  12.51  Df = 976.3 -507.4 ps  S = 136.6 ps  Cin =  1.5 ff  Cout =  13.9 ff  Cmax = 312.2 ff  G =  904  
+ABC: Path  3 --     184 : 4    3 sky130_fd_sc_hd__a211o_2  A =  10.01  Df =1322.4 -512.6 ps  S =  65.5 ps  Cin =  2.4 ff  Cout =   9.6 ff  Cmax = 325.0 ff  G =  390  
+ABC: Path  4 --     234 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1546.8 -552.6 ps  S =  51.1 ps  Cin =  2.0 ff  Cout =   6.3 ff  Cmax = 288.4 ff  G =  291  
+ABC: Path  5 --     235 : 3    3 sky130_fd_sc_hd__and3_2   A =   7.51  Df =1765.1 -143.7 ps  S =  68.5 ps  Cin =  1.5 ff  Cout =   8.2 ff  Cmax = 309.5 ff  G =  527  
+ABC: Path  6 --     237 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =2230.3 -361.0 ps  S =  91.2 ps  Cin =  1.5 ff  Cout =   6.9 ff  Cmax = 310.4 ff  G =  442  
+ABC: Path  7 --     240 : 4    3 sky130_fd_sc_hd__a211oi_2 A =  12.51  Df =2481.8 -331.4 ps  S = 236.4 ps  Cin =  4.4 ff  Cout =   8.7 ff  Cmax =  88.8 ff  G =  187  
+ABC: Path  8 --     281 : 3    3 sky130_fd_sc_hd__o21ba_2  A =  10.01  Df =2682.4 -195.0 ps  S =  87.3 ps  Cin =  2.1 ff  Cout =  12.5 ff  Cmax = 264.6 ff  G =  586  
+ABC: Path  9 --     282 : 2    4 sky130_fd_sc_hd__xnor2_2  A =  16.27  Df =2868.6 -112.6 ps  S = 291.0 ps  Cin =  8.5 ff  Cout =  19.3 ff  Cmax = 121.8 ff  G =  218  
+ABC: Path 10 --     383 : 4    1 sky130_fd_sc_hd__or4_2    A =   8.76  Df =3524.2 -592.3 ps  S =  90.2 ps  Cin =  1.5 ff  Cout =   1.5 ff  Cmax = 310.4 ff  G =   91  
+ABC: Path 11 --     384 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =3975.1 -491.8 ps  S =  98.5 ps  Cin =  1.5 ff  Cout =   9.2 ff  Cmax = 310.4 ff  G =  584  
+ABC: Path 12 --     411 : 3    4 sky130_fd_sc_hd__a21boi_2 A =  11.26  Df =4191.9 -638.3 ps  S = 192.6 ps  Cin =  3.6 ff  Cout =  13.5 ff  Cmax = 129.1 ff  G =  355  
+ABC: Path 13 --     446 : 4    2 sky130_fd_sc_hd__o31a_2   A =  10.01  Df =4400.3 -485.3 ps  S =  89.5 ps  Cin =  2.3 ff  Cout =  13.5 ff  Cmax = 285.7 ff  G =  557  
+ABC: Path 14 --     448 : 3    1 sky130_fd_sc_hd__a21oi_2  A =   8.76  Df =4474.9 -376.1 ps  S = 146.9 ps  Cin =  4.6 ff  Cout =   9.0 ff  Cmax = 128.2 ff  G =  190  
+ABC: Path 15 --     452 : 2    1 sky130_fd_sc_hd__xnor2_2  A =  16.27  Df =4866.6 -500.3 ps  S = 453.9 ps  Cin =  8.5 ff  Cout =  33.4 ff  Cmax = 121.8 ff  G =  394  
+ABC: Start-point = pi12 (\weight [5]).  End-point = po14 ($auto$maccmap.cc:240:synth$120.Y [15]).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   33/   32  lat =    0  nd =   406  edge =   1072  area =3844.25  delay =16.00  lev = 16
+ABC: + write_blif /tmp/yosys-abc-KKoR7b/output.blif 
+
+54.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or4bb_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand4_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:       25
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__or2b_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       29
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       47
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       23
+ABC RESULTS:        internal signals:      423
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+
+55. Executing SETUNDEF pass (replace undef values with defined constants).
+
+56. Executing HILOMAP pass (mapping to constant drivers).
+
+57. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tensor_mac..
+Removed 0 unused cells and 568 unused wires.
+<suppressed ~1 debug messages>
+
+59. Executing INSBUF pass (insert buffer cells for connected wires).
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module tensor_mac...
+Warning: Wire tensor_mac.\accumulator [15] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [14] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [13] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [12] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [11] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [10] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [9] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [8] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [7] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [6] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [5] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [4] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [3] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [2] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [1] is used but has no driver.
+Warning: Wire tensor_mac.\accumulator [0] is used but has no driver.
+Found and reported 16 problems.
+
+61. Printing statistics.
+
+=== tensor_mac ===
+
+   Number of wires:                411
+   Number of wire bits:            440
+   Number of public wires:           5
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                422
+     sky130_fd_sc_hd__a211o_2        7
+     sky130_fd_sc_hd__a211oi_2       4
+     sky130_fd_sc_hd__a21bo_2       10
+     sky130_fd_sc_hd__a21boi_2       3
+     sky130_fd_sc_hd__a21o_2        20
+     sky130_fd_sc_hd__a21oi_2       24
+     sky130_fd_sc_hd__a22o_2        11
+     sky130_fd_sc_hd__a22oi_2        7
+     sky130_fd_sc_hd__a2bb2o_2       4
+     sky130_fd_sc_hd__a31o_2         5
+     sky130_fd_sc_hd__a32o_2         4
+     sky130_fd_sc_hd__a41o_2         2
+     sky130_fd_sc_hd__and2_2         8
+     sky130_fd_sc_hd__and2b_2        9
+     sky130_fd_sc_hd__and3_2        25
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__and4_2        10
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__and4bb_2       3
+     sky130_fd_sc_hd__buf_1         20
+     sky130_fd_sc_hd__dfrtp_2       16
+     sky130_fd_sc_hd__inv_2         23
+     sky130_fd_sc_hd__nand2_2       29
+     sky130_fd_sc_hd__nand3_2       11
+     sky130_fd_sc_hd__nand4_2        6
+     sky130_fd_sc_hd__nor2_2        24
+     sky130_fd_sc_hd__nor3_2         1
+     sky130_fd_sc_hd__nor3b_2        1
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o211a_2        5
+     sky130_fd_sc_hd__o211ai_2       5
+     sky130_fd_sc_hd__o21a_2         5
+     sky130_fd_sc_hd__o21ai_2        6
+     sky130_fd_sc_hd__o21ba_2        4
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o22ai_2        2
+     sky130_fd_sc_hd__o2bb2a_2       2
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__or2_2         14
+     sky130_fd_sc_hd__or2b_2        10
+     sky130_fd_sc_hd__or3_2          4
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__or4_2          2
+     sky130_fd_sc_hd__or4bb_2        4
+     sky130_fd_sc_hd__xnor2_2       47
+     sky130_fd_sc_hd__xor2_2        15
+
+   Chip area for module '\tensor_mac': 4264.089600
+
+62. Executing Verilog backend.
+Dumping module `\tensor_mac'.
+
+Warnings: 16 unique messages, 16 total
+End of script. Logfile hash: d3c0a88e8d, CPU: user 0.60s system 0.02s, MEM: 29.35 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+Time spent: 66% 2x abc (1 sec), 7% 4x stat (0 sec), ...

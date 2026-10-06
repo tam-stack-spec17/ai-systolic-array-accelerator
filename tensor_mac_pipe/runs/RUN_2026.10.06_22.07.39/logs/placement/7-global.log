@@ -1,0 +1,127 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/results/floorplan/tensor_mac_pipe.odb'…
+define_corners Typical
+read_liberty -corner Typical /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/tmp/floorplan/3-initial_fp.sdc'…
+[INFO]: Setting RC values...
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 144440 138720
+[INFO GPL-0006] NumInstances: 815
+[INFO GPL-0007] NumPlaceInstances: 476
+[INFO GPL-0008] NumFixedInstances: 339
+[INFO GPL-0009] NumDummyInstances: 0
+[INFO GPL-0010] NumNets: 494
+[INFO GPL-0011] NumPins: 1688
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 150000 150000
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 144440 138720
+[INFO GPL-0016] CoreArea: 17759532800
+[INFO GPL-0017] NonPlaceInstsArea: 659382400
+[INFO GPL-0018] PlaceInstsArea: 4739545600
+[INFO GPL-0019] Util(%): 27.72
+[INFO GPL-0020] StdInstsArea: 4739545600
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000012 HPWL: 8889170
+[InitialPlace]  Iter: 2 CG residual: 0.00000008 HPWL: 7999716
+[InitialPlace]  Iter: 3 CG residual: 0.00000012 HPWL: 8034756
+[InitialPlace]  Iter: 4 CG residual: 0.00000011 HPWL: 8059719
+[InitialPlace]  Iter: 5 CG residual: 0.00000011 HPWL: 8070484
+[INFO GPL-0031] FillerInit: NumGCells: 882
+[INFO GPL-0032] FillerInit: NumGNets: 494
+[INFO GPL-0033] FillerInit: NumGPins: 1688
+[INFO GPL-0023] TargetDensity: 0.50
+[INFO GPL-0024] AveragePlaceInstArea: 9957028
+[INFO GPL-0025] IdealBinArea: 19914056
+[INFO GPL-0026] IdealBinCnt: 891
+[INFO GPL-0027] TotalBinArea: 17759532800
+[INFO GPL-0028] BinCnt: 16 16
+[INFO GPL-0029] BinSize: 8683 7990
+[INFO GPL-0030] NumBins: 256
+[NesterovSolve] Iter: 1 overflow: 0.898673 HPWL: 5200068
+[INFO GPL-0100] worst slack 4.18e-12
+[INFO GPL-0103] Weighted 49 nets.
+[NesterovSolve] Iter: 10 overflow: 0.717816 HPWL: 6534736
+[NesterovSolve] Iter: 20 overflow: 0.69137 HPWL: 6665113
+[NesterovSolve] Iter: 30 overflow: 0.687193 HPWL: 6692970
+[NesterovSolve] Iter: 40 overflow: 0.693831 HPWL: 6668918
+[NesterovSolve] Iter: 50 overflow: 0.694887 HPWL: 6654170
+[NesterovSolve] Iter: 60 overflow: 0.693172 HPWL: 6656932
+[NesterovSolve] Iter: 70 overflow: 0.693274 HPWL: 6658846
+[NesterovSolve] Iter: 80 overflow: 0.693321 HPWL: 6660420
+[NesterovSolve] Iter: 90 overflow: 0.692759 HPWL: 6662344
+[NesterovSolve] Iter: 100 overflow: 0.692627 HPWL: 6663366
+[NesterovSolve] Iter: 110 overflow: 0.692469 HPWL: 6666150
+[NesterovSolve] Iter: 120 overflow: 0.691571 HPWL: 6672707
+[NesterovSolve] Iter: 130 overflow: 0.689972 HPWL: 6682074
+[NesterovSolve] Iter: 140 overflow: 0.687875 HPWL: 6694890
+[NesterovSolve] Iter: 150 overflow: 0.684913 HPWL: 6714864
+[NesterovSolve] Iter: 160 overflow: 0.680706 HPWL: 6748219
+[NesterovSolve] Iter: 170 overflow: 0.674779 HPWL: 6803171
+[NesterovSolve] Iter: 180 overflow: 0.666616 HPWL: 6880354
+[NesterovSolve] Iter: 190 overflow: 0.655196 HPWL: 6994487
+[NesterovSolve] Iter: 200 overflow: 0.638453 HPWL: 7157163
+[INFO GPL-0100] worst slack 2.3e-12
+[INFO GPL-0103] Weighted 48 nets.
+[NesterovSolve] Iter: 210 overflow: 0.61631 HPWL: 7356538
+[NesterovSolve] Snapshot saved at iter = 216
+[NesterovSolve] Iter: 220 overflow: 0.589687 HPWL: 7588765
+[NesterovSolve] Iter: 230 overflow: 0.546088 HPWL: 7813677
+[NesterovSolve] Iter: 240 overflow: 0.505197 HPWL: 7947265
+[INFO GPL-0100] worst slack -2.61e-11
+[INFO GPL-0103] Weighted 48 nets.
+[NesterovSolve] Iter: 250 overflow: 0.459008 HPWL: 8091645
+[NesterovSolve] Iter: 260 overflow: 0.400045 HPWL: 8020598
+[NesterovSolve] Iter: 270 overflow: 0.368805 HPWL: 8117365
+[NesterovSolve] Iter: 280 overflow: 0.328014 HPWL: 8334039
+[NesterovSolve] Iter: 290 overflow: 0.29672 HPWL: 8275189
+[INFO GPL-0100] worst slack -5.7e-11
+[INFO GPL-0103] Weighted 49 nets.
+[NesterovSolve] Iter: 300 overflow: 0.263962 HPWL: 8336429
+[NesterovSolve] Iter: 310 overflow: 0.221803 HPWL: 8417083
+[INFO GPL-0100] worst slack -5.75e-11
+[INFO GPL-0103] Weighted 49 nets.
+[INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
+[INFO GPL-0036] TileLxLy: 0 0
+[INFO GPL-0037] TileSize: 6900 6900
+[INFO GPL-0038] TileCnt: 21 21
+[INFO GPL-0039] numRoutingLayers: 6
+[INFO GPL-0040] NumTiles: 441
+[INFO GPL-0063] TotalRouteOverflowH2: 0.0
+[INFO GPL-0064] TotalRouteOverflowV2: 0.0
+[INFO GPL-0065] OverflowTileCnt2: 0
+[INFO GPL-0066] 0.5%RC: 1.0
+[INFO GPL-0067] 1.0%RC: 0.9874999970197678
+[INFO GPL-0068] 2.0%RC: 0.9586956423261891
+[INFO GPL-0069] 5.0%RC: 0.8839285746216774
+[INFO GPL-0070] 0.5rcK: 1.0
+[INFO GPL-0071] 1.0rcK: 1.0
+[INFO GPL-0072] 2.0rcK: 0.0
+[INFO GPL-0073] 5.0rcK: 0.0
+[INFO GPL-0074] FinalRC: 0.99375
+[NesterovSolve] Iter: 320 overflow: 0.193696 HPWL: 8497302
+[NesterovSolve] Iter: 330 overflow: 0.168113 HPWL: 8554815
+[INFO GPL-0100] worst slack -6.07e-11
+[INFO GPL-0103] Weighted 48 nets.
+[NesterovSolve] Iter: 340 overflow: 0.136817 HPWL: 8587286
+[NesterovSolve] Iter: 350 overflow: 0.114847 HPWL: 8648669
+[NesterovSolve] Iter: 360 overflow: 0.10211 HPWL: 8690724
+[NesterovSolve] Finished with Overflow: 0.099612
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/tmp/placement/7-global.odb'…
+Writing netlist to '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/tmp/placement/7-global.nl.v'…
+Writing powered netlist to '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/tmp/placement/7-global.pnl.v'…
+Writing layout to '/openlane/designs/tensor_mac_pipe/runs/RUN_2026.10.06_22.07.39/tmp/placement/7-global.def'…

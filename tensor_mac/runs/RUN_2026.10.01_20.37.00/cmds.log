@@ -1,0 +1,50 @@
+Thu Oct 01 20:37:00 UTC 2026 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/layers.list /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef"
+
+Thu Oct 01 20:37:01 UTC 2026 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/merged.nom.lef -i /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Oct 01 20:37:01 UTC 2026 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/merged.min.lef -i /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Oct 01 20:37:01 UTC 2026 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/merged.max.lef -i /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Oct 01 20:37:02 UTC 2026 - Executing "python3 /openlane/scripts/mergeLib.py --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/merged.lib --name sky130A_merged /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Oct 01 20:37:02 UTC 2026 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/trimmed.lib /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/merged.lib"
+
+Thu Oct 01 20:37:02 UTC 2026 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts.lib.exclude.list --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts.lib /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Oct 01 20:37:03 UTC 2026 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts-fastest.lib /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib"
+
+Thu Oct 01 20:37:03 UTC 2026 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/cts/cts-slowest.lib /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "python3 /openlane/scripts/new_tracks.py -i /home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/routing/config.tracks"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "echo {OpenLane ff5509f65b17bfa4068d5336495ab1718987ff69} > /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/OPENLANE_COMMIT"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "bash -c {verilator  --lint-only  -Wall  --Wno-DECLFILENAME  --top-module tensor_mac  /openlane/designs/tensor_mac/src/tensor_mac.v -Wno-fatal --relative-includes |& tee /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/synthesis/linter.log /dev/null}"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/trimmed.lib > /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/synthesis/1-trimmed.no_pg.lib"
+
+Thu Oct 01 20:37:04 UTC 2026 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/synthesis/1-synthesis.log"
+
+Thu Oct 01 20:37:06 UTC 2026 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/tensor_mac\/runs\/RUN_2026.10.01_20.37.00\/results\/synthesis\/tensor_mac.v/} /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/config.tcl"
+
+Thu Oct 01 20:37:06 UTC 2026 - Executing "sed -i.bak /defparam/d /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/results/synthesis/tensor_mac.v"
+
+Thu Oct 01 20:37:06 UTC 2026 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/synthesis/2-sta.log"
+
+Thu Oct 01 20:37:07 UTC 2026 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/floorplan/3-initial_fp.log"
+
+Thu Oct 01 20:37:08 UTC 2026 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/snap_to_grid.py --output /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/floorplan/3-minimized_pdn.txt --input-lef /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/merged.nom.lef 6.095000000000001 4.76 12.190000000000001 9.52"
+
+Thu Oct 01 20:37:08 UTC 2026 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/dimensions.txt --input-lef /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/merged.nom.lef /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/tmp/floorplan/3-initial_fp.def"
+
+Thu Oct 01 20:37:09 UTC 2026 - Executing "openroad -exit /openlane/scripts/openroad/ioplacer.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/floorplan/4-io.log"
+
+Thu Oct 01 20:37:09 UTC 2026 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/floorplan/5-tap.log"
+
+Thu Oct 01 20:37:10 UTC 2026 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/floorplan/6-pdn.log"
+
+Thu Oct 01 20:37:11 UTC 2026 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/tensor_mac/runs/RUN_2026.10.01_20.37.00/logs/placement/7-global.log"
+

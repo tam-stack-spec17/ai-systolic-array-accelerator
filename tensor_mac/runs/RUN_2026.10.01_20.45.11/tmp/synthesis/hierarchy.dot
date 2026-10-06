@@ -1,0 +1,22 @@
+digraph "tensor_mac" {
+label="tensor_mac";
+rankdir="LR";
+remincross=true;
+n4 [ shape=octagon, label="accumulator", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="activation", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="weight", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="reset", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+c12 [ shape=record, label="{{<p9> A|<p10> B}|$3\n$add|{<p11> Y}}",  ];
+c13 [ shape=record, label="{{<p9> A|<p10> B}|$2\n$mul|{<p11> Y}}",  ];
+p0 [shape=box, style=rounded, label="PROC $1\n/openlane/designs/tensor_mac/src/tensor_mac.v:8.5-14.8"];
+c12:p11:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c13:p11:e -> c12:p10:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p0:e -> n4:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n4:e -> c12:p9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n4:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n5:e -> c13:p10:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n6:e -> c13:p9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n7:e -> p0:w [color="black", fontcolor="black", label=""];
+n8:e -> p0:w [color="black", fontcolor="black", label=""];
+}

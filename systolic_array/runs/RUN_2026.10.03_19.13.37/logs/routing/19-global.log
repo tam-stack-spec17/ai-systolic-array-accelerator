@@ -1,0 +1,91 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/17-systolic_array.odb'…
+define_corners Typical
+read_liberty -corner Typical /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/17-systolic_array.sdc'…
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/routing/groute-congestion.rpt
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0019] Found 89 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 7712
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal     264500        132044          50.08%
+met2       Vertical       198375        132902          33.00%
+met3       Horizontal     132250         92777          29.85%
+met4       Vertical        79350         51094          35.61%
+met5       Horizontal      26450         12882          51.30%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 31118
+[INFO GRT-0198] Via related Steiner nodes: 626
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 34592
+[INFO GRT-0112] Final usage 3D: 153100
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1            132044         21335           16.16%             0 /  0 /  0
+met2            132902         22433           16.88%             0 /  0 /  0
+met3             92777          3197            3.45%             0 /  0 /  0
+met4             51094          2359            4.62%             0 /  0 /  0
+met5             12882             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           421699         49324           11.70%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 456869 um
+[INFO GRT-0014] Routed nets: 7798
+[INFO GRT-0006] Repairing antennas, iteration 1.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[WARNING ANT-0009] Net net111 requires more than 10 diodes per gate to repair violations.
+[WARNING ANT-0009] Net net112 requires more than 10 diodes per gate to repair violations.
+[WARNING ANT-0009] Net net282 requires more than 10 diodes per gate to repair violations.
+[INFO GRT-0012] Found 54 antenna violations.
+[INFO GRT-0015] Inserted 162 diodes.
+[INFO GRT-0054] Using detailed placer to place 27 diodes.
+[INFO GRT-0009] rerouting 5854 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+[INFO GRT-0006] Repairing antennas, iteration 2.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0012] Found 13 antenna violations.
+[INFO GRT-0015] Inserted 16 diodes.
+[INFO GRT-0009] rerouting 78 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 8
+[INFO GRT-0006] Repairing antennas, iteration 3.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0012] Found 0 antenna violations.
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/routing/19-global.odb'…
+Writing layout to '/openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/routing/19-global.def'…
+Writing routing guides to '/openlane/designs/systolic_array/runs/RUN_2026.10.03_19.13.37/tmp/routing/19-global.guide'…

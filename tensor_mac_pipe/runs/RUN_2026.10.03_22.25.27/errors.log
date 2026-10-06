@@ -1,0 +1,35 @@
+[ERROR]: during executing openroad script /openlane/scripts/openroad/gpl.tcl
+[ERROR]: Log: designs/tensor_mac_pipe/runs/RUN_2026.10.03_22.25.27/logs/placement/7-global.log
+[ERROR]: Last 10 lines:
+[InitialPlace]  Iter: 1 CG residual: 0.00000010 HPWL: 7295060
+[InitialPlace]  Iter: 2 CG residual: 0.00000011 HPWL: 6814433
+[InitialPlace]  Iter: 3 CG residual: 0.00000010 HPWL: 6854057
+[InitialPlace]  Iter: 4 CG residual: 0.00000008 HPWL: 6887633
+[InitialPlace]  Iter: 5 CG residual: 0.00000009 HPWL: 6893661
+[ERROR GPL-0302] Use a higher -density or re-floorplan with a larger core area.
+Given target density: 0.50
+Suggested target density: 0.76
+Error: gpl.tcl, 71 GPL-0302
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...
+[ERROR]: Step 7 (placement) failed with error:
+-code 1 -level 0 -errorcode NONE -errorinfo {
+    while executing
+"throw_error"
+    (procedure "run_tcl_script" line 219)
+    invoked from within
+"run_tcl_script -tool openroad -no_consume {*}$args"
+    (procedure "run_openroad_script" line 2)
+    invoked from within
+"run_openroad_script $::env(SCRIPTS_DIR)/openroad/gpl.tcl -indexed_log [index_file $::env(placement_logs)/global.log] -save "to=$::env(placement_tmpfil..."
+    (procedure "global_placement_or" line 12)
+    invoked from within
+"global_placement_or"
+    (procedure "run_placement" line 14)
+    invoked from within
+"run_placement"
+    (procedure "run_placement_step" line 8)
+    invoked from within
+"run_placement_step"} -errorline 1
+[ERROR]: Flow failed.
