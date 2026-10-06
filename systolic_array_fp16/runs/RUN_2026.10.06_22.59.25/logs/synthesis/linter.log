@@ -1,0 +1,10 @@
+%Warning-UNUSEDSIGNAL: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18:16: Bits of signal are not used: 'res_exp'[5]
+                                                                                                                 : ... In instance systolic_array_fp16.row[3].col[3].pe.fp16_core
+   18 |     wire [5:0] res_exp = w_exp + a_exp - 5'd15;
+      |                ^~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.009
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19:17: Bits of signal are not used: 'res_frac'[9:0]
+                                                                                                                 : ... In instance systolic_array_fp16.row[3].col[3].pe.fp16_core
+   19 |     wire [21:0] res_frac = w_frac * a_frac;
+      |                 ^~~~~~~~

@@ -1,0 +1,1583 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v
+Parsing SystemVerilog input from `/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v' to AST representation.
+Generating RTLIL representation for module `\tensor_mac_fp16'.
+Generating RTLIL representation for module `\systolic_pe_fp16'.
+Generating RTLIL representation for module `\systolic_array_fp16'.
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/hierarchy.dot'.
+Dumping module systolic_array_fp16 to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+Used module:     \systolic_pe_fp16
+Used module:         \tensor_mac_fp16
+
+3.2. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+Used module:     \systolic_pe_fp16
+Used module:         \tensor_mac_fp16
+Removed 0 unused modules.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+Used module:     \systolic_pe_fp16
+Used module:         \tensor_mac_fp16
+
+5.2. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+Used module:     \systolic_pe_fp16
+Used module:         \tensor_mac_fp16
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7 in module systolic_pe_fp16.
+Marked 2 switch rules as full_case in process $proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5 in module tensor_mac_fp16.
+Removed a total of 0 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 40 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\systolic_pe_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7'.
+Found async reset \reset in `\tensor_mac_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5'.
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+Creating decoders for process `\systolic_pe_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7'.
+     1/2: $0\a_out[15:0]
+     2/2: $0\w_out[15:0]
+Creating decoders for process `\tensor_mac_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5'.
+     1/1: $0\result[15:0]
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\systolic_array_fp16.\w[0]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[1]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[2]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[3]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[4]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[5]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[6]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[7]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[8]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[9]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[10]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[11]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[12]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[13]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[14]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[15]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[16]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[17]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[18]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\w[19]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[0]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[1]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[2]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[3]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[5]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[6]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[7]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[8]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[10]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[11]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[12]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[13]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[15]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[16]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[17]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[18]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[20]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[21]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[22]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+No latch inferred for signal `\systolic_array_fp16.\a[23]' from process `\systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\systolic_pe_fp16.\w_out' using process `\systolic_pe_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7'.
+  created $adff cell `$procdff$92' with positive edge clock and positive level reset.
+Creating register for signal `\systolic_pe_fp16.\a_out' using process `\systolic_pe_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7'.
+  created $adff cell `$procdff$93' with positive edge clock and positive level reset.
+Creating register for signal `\tensor_mac_fp16.\result' using process `\tensor_mac_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5'.
+  created $adff cell `$procdff$94' with positive edge clock and positive level reset.
+
+15. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+16. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `systolic_array_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:0$88'.
+Removing empty process `systolic_pe_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:48$7'.
+Found and cleaned up 1 empty switch in `\tensor_mac_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5'.
+Removing empty process `tensor_mac_fp16.$proc$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:21$5'.
+Cleaned up 1 empty switch.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_fp16...
+Checking module systolic_pe_fp16...
+Checking module tensor_mac_fp16...
+Found and reported 0 problems.
+
+18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+Optimizing module systolic_pe_fp16.
+Optimizing module tensor_mac_fp16.
+
+19. Executing FLATTEN pass (flatten design).
+Deleting now unused module systolic_pe_fp16.
+Deleting now unused module tensor_mac_fp16.
+<suppressed ~17 debug messages>
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 8 unused cells and 258 unused wires.
+<suppressed ~35 debug messages>
+
+22. Executing OPT pass (performing simple optimizations).
+
+22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+22.9. Finished OPT passes. (There is nothing left to do.)
+
+23. Executing FSM pass (extract and optimize FSM).
+
+23.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+23.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+23.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+23.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+23.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+23.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+24.9. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 5) from port B of cell systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 6) from port A of cell systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+Removed top 1 bits (of 16) from mux cell systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$procmux$90 ($mux).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from port Y of cell systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+Removed top 1 bits (of 6) from wire systolic_array_fp16.$flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2_Y.
+
+26. Executing PEEPOPT pass (run peephole optimizers).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+28. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module systolic_array_fp16:
+  creating $macc model for $flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[0].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[0].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[0].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[0].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[1].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[1].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[1].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[1].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[2].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[2].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[2].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[2].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[3].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[3].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[3].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  creating $macc model for $flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 ($add).
+  creating $macc model for $flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6 ($add).
+  creating $macc model for $flatten\row[3].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4 ($mul).
+  creating $macc model for $flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3 ($sub).
+  merging $macc model for $flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  merging $macc model for $flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$2 into $flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3.
+  creating $alu model for $macc $flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $alu model for $macc $flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6.
+  creating $macc cell for $flatten\row[1].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$111
+  creating $macc cell for $flatten\row[1].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$112
+  creating $macc cell for $flatten\row[2].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$113
+  creating $macc cell for $flatten\row[2].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$114
+  creating $macc cell for $flatten\row[1].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$115
+  creating $macc cell for $flatten\row[1].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$116
+  creating $macc cell for $flatten\row[2].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$117
+  creating $macc cell for $flatten\row[2].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$118
+  creating $macc cell for $flatten\row[1].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$119
+  creating $macc cell for $flatten\row[1].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$120
+  creating $macc cell for $flatten\row[3].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$121
+  creating $macc cell for $flatten\row[3].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$122
+  creating $macc cell for $flatten\row[1].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$123
+  creating $macc cell for $flatten\row[1].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$124
+  creating $macc cell for $flatten\row[2].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$125
+  creating $macc cell for $flatten\row[3].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$126
+  creating $macc cell for $flatten\row[0].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$127
+  creating $macc cell for $flatten\row[0].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$128
+  creating $macc cell for $flatten\row[2].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$129
+  creating $macc cell for $flatten\row[3].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$130
+  creating $macc cell for $flatten\row[0].col[2].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$131
+  creating $macc cell for $flatten\row[0].col[2].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$132
+  creating $macc cell for $flatten\row[3].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$133
+  creating $macc cell for $flatten\row[3].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$134
+  creating $macc cell for $flatten\row[0].col[1].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$135
+  creating $macc cell for $flatten\row[0].col[1].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$136
+  creating $macc cell for $flatten\row[2].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$137
+  creating $macc cell for $flatten\row[3].col[3].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$138
+  creating $macc cell for $flatten\row[0].col[0].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$139
+  creating $macc cell for $flatten\row[0].col[0].pe.\fp16_core.$mul$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:19$4: $auto$alumacc.cc:365:replace_macc$140
+  creating $macc cell for $flatten\row[2].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$141
+  creating $macc cell for $flatten\row[3].col[3].pe.\fp16_core.$sub$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:18$3: $auto$alumacc.cc:365:replace_macc$142
+  creating $alu cell for $flatten\row[0].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$143
+  creating $alu cell for $flatten\row[0].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$146
+  creating $alu cell for $flatten\row[3].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$149
+  creating $alu cell for $flatten\row[0].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$152
+  creating $alu cell for $flatten\row[0].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$155
+  creating $alu cell for $flatten\row[1].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$158
+  creating $alu cell for $flatten\row[1].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$161
+  creating $alu cell for $flatten\row[3].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$164
+  creating $alu cell for $flatten\row[1].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$167
+  creating $alu cell for $flatten\row[3].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$170
+  creating $alu cell for $flatten\row[1].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$173
+  creating $alu cell for $flatten\row[2].col[0].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$176
+  creating $alu cell for $flatten\row[2].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$179
+  creating $alu cell for $flatten\row[3].col[1].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$182
+  creating $alu cell for $flatten\row[2].col[2].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$185
+  creating $alu cell for $flatten\row[2].col[3].pe.\fp16_core.$add$/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/src/systolic_array_fp16.v:24$6: $auto$alumacc.cc:485:replace_alu$188
+  created 16 $alu and 32 $macc cells.
+
+29. Executing SHARE pass (SAT-based resource sharing).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 16 unused cells and 16 unused wires.
+<suppressed ~17 debug messages>
+
+30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+30.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+30.16. Finished OPT passes. (There is nothing left to do.)
+
+31. Executing MEMORY pass.
+
+31.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+31.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+31.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+31.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+31.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+31.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+31.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+31.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+31.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+31.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+<suppressed ~16 debug messages>
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+33.5. Finished fast OPT passes.
+
+34. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_SHARE pass.
+
+35.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+35.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+35.10. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing TECHMAP pass (map to technology primitives).
+
+36.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+36.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc.
+  add { 1'1 \weights_in [9:0] } * { 1'1 \acts_in [9:0] } (11x11 bits, unsigned)
+  add \row[2].col[2].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[1].col[3].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $xor.
+  add { 1'1 \row[0].col[0].pe.w_out [9:0] } * { 1'1 \acts_in [25:16] } (11x11 bits, unsigned)
+  add { 1'1 \row[2].col[2].pe.w_out [9:0] } * { 1'1 \row[1].col[3].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[0].col[1].pe.w_out [9:0] } * { 1'1 \acts_in [41:32] } (11x11 bits, unsigned)
+  add { 1'1 \weights_in [57:48] } * { 1'1 \row[2].col[0].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[0].col[2].pe.w_out [9:0] } * { 1'1 \acts_in [57:48] } (11x11 bits, unsigned)
+  add \row[2].col[1].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[1].col[2].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \weights_in [25:16] } * { 1'1 \row[0].col[0].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[2].col[1].pe.w_out [9:0] } * { 1'1 \row[1].col[2].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[1].col[0].pe.w_out [9:0] } * { 1'1 \row[0].col[1].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[3].col[0].pe.w_out [9:0] } * { 1'1 \row[2].col[1].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add { 1'1 \row[1].col[1].pe.w_out [9:0] } * { 1'1 \row[0].col[2].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \row[2].col[0].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[1].col[1].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \row[1].col[2].pe.w_out [9:0] } * { 1'1 \row[0].col[3].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \weights_in [46:42] (5 bits, unsigned)
+  add \row[1].col[0].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \row[2].col[0].pe.w_out [9:0] } * { 1'1 \row[1].col[1].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \row[1].col[0].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[0].col[1].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \weights_in [41:32] } * { 1'1 \row[1].col[0].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \row[1].col[1].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[0].col[2].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \weights_in [62:58] (5 bits, unsigned)
+  add \row[2].col[0].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \row[3].col[1].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[2].col[2].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \row[3].col[2].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[2].col[3].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \row[3].col[2].pe.w_out [9:0] } * { 1'1 \row[2].col[3].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \row[0].col[1].pe.w_out [14:10] (5 bits, unsigned)
+  add \acts_in [46:42] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \row[3].col[0].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[2].col[1].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \row[0].col[0].pe.w_out [14:10] (5 bits, unsigned)
+  add \acts_in [30:26] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add { 1'1 \row[3].col[1].pe.w_out [9:0] } * { 1'1 \row[2].col[2].pe.a_out [9:0] } (11x11 bits, unsigned)
+  add \row[0].col[2].pe.w_out [14:10] (5 bits, unsigned)
+  add \acts_in [62:58] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \weights_in [30:26] (5 bits, unsigned)
+  add \row[0].col[0].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \row[1].col[2].pe.w_out [14:10] (5 bits, unsigned)
+  add \row[0].col[3].pe.a_out [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+  add \weights_in [14:10] (5 bits, unsigned)
+  add \acts_in [14:10] (5 bits, unsigned)
+  add 5'10001 (5 bits, unsigned)
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010110 for cells of type $fa.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using template $paramod$e161c1674351796cd6dd381e70ff05458bfe7755\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010110 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3901 debug messages>
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+<suppressed ~12527 debug messages>
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+<suppressed ~96 debug messages>
+Removed a total of 32 cells.
+
+37.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 795 unused cells and 3447 unused wires.
+<suppressed ~796 debug messages>
+
+37.5. Finished fast OPT passes.
+
+38. Executing ABC pass (technology mapping using ABC).
+
+38.1. Extracting gate netlist of module `\systolic_array_fp16' to `<abc-temp-dir>/input.blif'..
+Extracted 11542 gates and 12054 wires to a netlist network with 512 inputs and 256 outputs.
+
+38.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+38.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:      576
+ABC RESULTS:              XNOR cells:     1081
+ABC RESULTS:               NOT cells:      385
+ABC RESULTS:               AND cells:     1444
+ABC RESULTS:             ORNOT cells:      749
+ABC RESULTS:               NOR cells:      623
+ABC RESULTS:                OR cells:      896
+ABC RESULTS:            ANDNOT cells:     3193
+ABC RESULTS:               MUX cells:      224
+ABC RESULTS:               XOR cells:     2675
+ABC RESULTS:        internal signals:    11286
+ABC RESULTS:           input signals:      512
+ABC RESULTS:          output signals:      256
+Removing temp directory.
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 0 unused cells and 2441 unused wires.
+<suppressed ~17 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing HIERARCHY pass (managing design hierarchy).
+
+40.1. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+
+40.2. Analyzing design hierarchy..
+Top module:  \systolic_array_fp16
+Removed 0 unused modules.
+
+41. Printing statistics.
+
+=== systolic_array_fp16 ===
+
+   Number of wires:              12179
+   Number of wire bits:          15368
+   Number of public wires:         349
+   Number of public wire bits:    3538
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              12486
+     $_ANDNOT_                    3193
+     $_AND_                       1444
+     $_DFF_PP0_                    640
+     $_MUX_                        224
+     $_NAND_                       576
+     $_NOR_                        623
+     $_NOT_                        385
+     $_ORNOT_                      749
+     $_OR_                         896
+     $_XNOR_                      1081
+     $_XOR_                       2675
+
+42. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_fp16...
+Found and reported 0 problems.
+
+43. Generating Graphviz representation of design.
+Writing dot description to `/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/post_techmap.dot'.
+Dumping module systolic_array_fp16 to page 1.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT pass (performing simple optimizations).
+
+45.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+45.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+45.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \systolic_array_fp16..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \systolic_array_fp16.
+Performed a total of 0 changes.
+
+45.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\systolic_array_fp16'.
+Removed a total of 0 cells.
+
+45.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+45.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+
+45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module systolic_array_fp16.
+
+45.9. Finished OPT passes. (There is nothing left to do.)
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 0 unused cells and 280 unused wires.
+<suppressed ~280 debug messages>
+
+47. Printing statistics.
+
+=== systolic_array_fp16 ===
+
+   Number of wires:              11899
+   Number of wire bits:          12640
+   Number of public wires:          69
+   Number of public wire bits:     810
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              12486
+     $_ANDNOT_                    3193
+     $_AND_                       1444
+     $_DFF_PP0_                    640
+     $_MUX_                        224
+     $_NAND_                       576
+     $_NOR_                        623
+     $_NOT_                        385
+     $_ORNOT_                      749
+     $_OR_                         896
+     $_XNOR_                      1081
+     $_XOR_                       2675
+
+mapping tbuf
+
+48. Executing TECHMAP pass (map to technology primitives).
+
+48.1. Executing Verilog-2005 frontend: /home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+48.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+49. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/taman/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+52. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+52.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\systolic_array_fp16':
+  mapped 640 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+
+53. Printing statistics.
+
+=== systolic_array_fp16 ===
+
+   Number of wires:              12539
+   Number of wire bits:          13280
+   Number of public wires:          69
+   Number of public wire bits:     810
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              13126
+     $_ANDNOT_                    3193
+     $_AND_                       1444
+     $_MUX_                        224
+     $_NAND_                       576
+     $_NOR_                        623
+     $_NOT_                       1025
+     $_ORNOT_                      749
+     $_OR_                         896
+     $_XNOR_                      1081
+     $_XOR_                       2675
+     sky130_fd_sc_hd__dfrtp_2      640
+
+[INFO]: USING STRATEGY AREA 0
+
+54. Executing ABC pass (technology mapping using ABC).
+
+54.1. Extracting gate netlist of module `\systolic_array_fp16' to `/tmp/yosys-abc-1TtHnO/input.blif'..
+Extracted 12486 gates and 12999 wires to a netlist network with 513 inputs and 896 outputs.
+
+54.1.1. Executing ABC.
+Running ABC command: "/build/bin/yosys-abc" -s -f /tmp/yosys-abc-1TtHnO/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-1TtHnO/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-1TtHnO/input.blif 
+ABC: + read_lib -w /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130A_merged" from "/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Memory =    9.54 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + retime -D -D 15000.0 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 15000.0 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer -N 10 -S 750.0 
+ABC: + upsize -D 15000.0 
+ABC: Current delay (5361.20 ps) does not exceed the target delay (15000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 15000.0 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =  10858 ( 15.0 %)   Cap = 11.3 ff (  2.9 %)   Area =    99709.38 ( 85.0 %)   Delay =  5845.18 ps  (  1.1 %)               
+ABC: Path  0 --     342 : 0    6 pi                        A =   0.00  Df =  45.9  -25.8 ps  S =  69.3 ps  Cin =  0.0 ff  Cout =  13.7 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --    8369 : 1   10 sky130_fd_sc_hd__buf_1    A =   3.75  Df = 376.6 -154.6 ps  S = 396.8 ps  Cin =  2.1 ff  Cout =  33.4 ff  Cmax = 130.0 ff  G = 1530  
+ABC: Path  2 --    8370 : 4    3 sky130_fd_sc_hd__nand4_2  A =  12.51  Df = 545.4 -158.7 ps  S = 145.5 ps  Cin =  4.4 ff  Cout =   8.3 ff  Cmax = 200.5 ff  G =  184  
+ABC: Path  3 --    8498 : 3    2 sky130_fd_sc_hd__a21o_2   A =   8.76  Df = 778.4 -251.9 ps  S =  48.2 ps  Cin =  2.4 ff  Cout =   6.6 ff  Cmax = 309.5 ff  G =  270  
+ABC: Path  4 --    8499 : 3    3 sky130_fd_sc_hd__and3_2   A =   7.51  Df = 996.7 -162.9 ps  S =  68.3 ps  Cin =  1.5 ff  Cout =   8.2 ff  Cmax = 309.5 ff  G =  525  
+ABC: Path  5 --    8501 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =1457.6 -344.0 ps  S =  88.6 ps  Cin =  1.5 ff  Cout =   6.1 ff  Cmax = 310.4 ff  G =  391  
+ABC: Path  6 --    8503 : 3    5 sky130_fd_sc_hd__and3_2   A =   7.51  Df =1700.1 -314.8 ps  S =  95.9 ps  Cin =  1.5 ff  Cout =  14.3 ff  Cmax = 309.5 ff  G =  917  
+ABC: Path  7 --    8539 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =2189.3 -389.5 ps  S =  88.7 ps  Cin =  1.5 ff  Cout =   6.1 ff  Cmax = 310.4 ff  G =  386  
+ABC: Path  8 --    8543 : 3    4 sky130_fd_sc_hd__and3_2   A =   7.51  Df =2408.2 -317.7 ps  S =  94.3 ps  Cin =  1.5 ff  Cout =  13.9 ff  Cmax = 309.5 ff  G =  883  
+ABC: Path  9 --    8573 : 3    3 sky130_fd_sc_hd__or3_2    A =   7.51  Df =2904.6 -422.0 ps  S =  93.1 ps  Cin =  1.5 ff  Cout =   7.5 ff  Cmax = 310.4 ff  G =  479  
+ABC: Path 10 --    8574 : 3    2 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =3134.9 -417.3 ps  S =  68.9 ps  Cin =  2.0 ff  Cout =  10.1 ff  Cmax = 288.4 ff  G =  475  
+ABC: Path 11 --    8635 : 3    1 sky130_fd_sc_hd__or3b_2   A =   8.76  Df =3585.2 -434.8 ps  S =  84.4 ps  Cin =  1.5 ff  Cout =   5.1 ff  Cmax = 269.2 ff  G =  320  
+ABC: Path 12 --    8636 : 3    1 sky130_fd_sc_hd__a21oi_2  A =   8.76  Df =3720.1 -473.6 ps  S =  78.0 ps  Cin =  4.6 ff  Cout =   2.5 ff  Cmax = 128.2 ff  G =   51  
+ABC: Path 13 --    8637 : 5    3 sky130_fd_sc_hd__a41o_2   A =  11.26  Df =3865.6 -193.1 ps  S =  97.1 ps  Cin =  2.3 ff  Cout =  15.6 ff  Cmax = 325.0 ff  G =  641  
+ABC: Path 14 --    8814 : 4    3 sky130_fd_sc_hd__a31oi_2  A =  12.51  Df =3968.0  -94.1 ps  S = 153.6 ps  Cin =  4.4 ff  Cout =   5.8 ff  Cmax = 118.1 ff  G =  126  
+ABC: Path 15 --    8910 : 4    4 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =4289.5 -116.9 ps  S = 141.4 ps  Cin =  2.4 ff  Cout =  21.6 ff  Cmax = 268.3 ff  G =  869  
+ABC: Path 16 --    8927 : 3    2 sky130_fd_sc_hd__nor3_2   A =  10.01  Df =4456.0 -220.8 ps  S = 136.0 ps  Cin =  4.4 ff  Cout =   4.1 ff  Cmax =  92.5 ff  G =   90  
+ABC: Path 17 --    8937 : 3    2 sky130_fd_sc_hd__o21a_2   A =   8.76  Df =4606.5 -157.3 ps  S =  38.2 ps  Cin =  2.4 ff  Cout =   3.9 ff  Cmax = 294.8 ff  G =  157  
+ABC: Path 18 --    8939 : 5    7 sky130_fd_sc_hd__a2111o_2 A =  12.51  Df =4935.7 -189.3 ps  S = 100.9 ps  Cin =  2.4 ff  Cout =  16.8 ff  Cmax = 324.1 ff  G =  669  
+ABC: Path 19 --    8940 : 1   10 sky130_fd_sc_hd__buf_1    A =   3.75  Df =5204.2  -46.0 ps  S = 504.8 ps  Cin =  2.1 ff  Cout =  42.8 ff  Cmax = 130.0 ff  G = 1955  
+ABC: Path 20 --    8941 : 3    1 sky130_fd_sc_hd__mux2_2   A =  11.26  Df =5559.7  -36.2 ps  S =  45.6 ps  Cin =  2.3 ff  Cout =   2.2 ff  Cmax = 297.6 ff  G =   92  
+ABC: Path 21 --    8942 : 1    1 sky130_fd_sc_hd__buf_1    A =   3.75  Df =5845.2  -66.6 ps  S = 396.6 ps  Cin =  2.1 ff  Cout =  33.4 ff  Cmax = 130.0 ff  G = 1590  
+ABC: Start-point = pi341 (\acts_in [4]).  End-point = po165 ($abc$26998$flatten\row[0].col[0].pe.\fp16_core.$0\result[15:0][0]).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =  513/  896  lat =    0  nd = 10858  edge =  27569  area =99721.72  delay =22.00  lev = 22
+ABC: + write_blif /tmp/yosys-abc-1TtHnO/output.blif 
+
+54.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:       18
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:       67
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:      102
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:       58
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:       85
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__nand4_2 cells:      361
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:      580
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:       30
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_2 cells:       31
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:       51
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:      192
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_2 cells:       96
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:      137
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:      512
+ABC RESULTS:   sky130_fd_sc_hd__or2b_2 cells:      173
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o32ai_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__a311o_2 cells:       30
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:       47
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:      252
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:      314
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:      420
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:      386
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:       63
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:      493
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:      106
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       93
+ABC RESULTS:   sky130_fd_sc_hd__mux2_2 cells:      190
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:      316
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:      852
+ABC RESULTS:   sky130_fd_sc_hd__or4bb_2 cells:       18
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:      764
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:      135
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:      332
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:      217
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:       32
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:     1047
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:      502
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:      854
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:      772
+ABC RESULTS:        internal signals:    11590
+ABC RESULTS:           input signals:      513
+ABC RESULTS:          output signals:      896
+Removing temp directory.
+
+55. Executing SETUNDEF pass (replace undef values with defined constants).
+
+56. Executing HILOMAP pass (mapping to constant drivers).
+
+57. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \systolic_array_fp16..
+Removed 0 unused cells and 13023 unused wires.
+<suppressed ~25 debug messages>
+
+59. Executing INSBUF pass (insert buffer cells for connected wires).
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module systolic_array_fp16...
+Warning: Wire systolic_array_fp16.\results [255] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [254] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [253] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [252] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [251] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [250] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [249] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [248] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [247] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [246] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [245] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [244] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [243] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [242] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [241] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [240] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [239] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [238] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [237] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [236] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [235] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [234] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [233] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [232] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [231] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [230] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [229] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [228] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [227] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [226] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [225] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [224] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [223] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [222] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [221] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [220] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [219] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [218] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [217] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [216] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [215] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [214] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [213] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [212] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [211] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [210] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [209] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [208] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [207] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [206] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [205] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [204] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [203] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [202] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [201] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [200] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [199] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [198] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [197] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [196] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [195] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [194] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [193] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [192] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [191] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [190] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [189] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [188] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [187] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [186] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [185] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [184] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [183] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [182] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [181] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [180] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [179] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [178] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [177] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [176] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [175] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [174] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [173] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [172] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [171] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [170] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [169] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [168] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [167] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [166] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [165] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [164] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [163] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [162] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [161] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [160] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [159] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [158] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [157] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [156] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [155] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [154] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [153] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [152] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [151] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [150] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [149] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [148] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [147] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [146] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [145] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [144] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [143] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [142] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [141] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [140] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [139] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [138] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [137] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [136] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [135] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [134] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [133] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [132] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [131] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [130] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [129] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [128] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [127] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [126] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [125] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [124] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [123] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [122] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [121] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [120] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [119] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [118] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [117] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [116] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [115] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [114] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [113] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [112] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [111] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [110] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [109] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [108] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [107] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [106] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [105] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [104] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [103] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [102] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [101] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [100] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [99] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [98] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [97] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [96] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [95] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [94] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [93] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [92] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [91] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [90] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [89] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [88] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [87] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [86] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [85] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [84] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [83] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [82] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [81] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [80] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [79] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [78] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [77] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [76] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [75] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [74] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [73] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [72] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [71] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [70] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [69] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [68] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [67] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [66] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [65] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [64] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [63] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [62] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [61] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [60] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [59] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [58] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [57] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [56] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [55] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [54] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [53] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [52] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [51] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [50] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [49] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [48] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [47] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [46] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [45] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [44] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [43] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [42] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [41] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [40] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [39] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [38] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [37] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [36] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [35] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [34] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [33] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [32] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [31] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [30] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [29] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [28] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [27] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [26] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [25] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [24] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [23] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [22] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [21] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [20] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [19] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [18] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [17] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [16] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [15] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [14] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [13] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [12] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [11] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [10] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [9] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [8] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [7] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [6] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [5] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [4] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [3] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [2] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [1] is used but has no driver.
+Warning: Wire systolic_array_fp16.\results [0] is used but has no driver.
+Found and reported 256 problems.
+
+61. Printing statistics.
+
+=== systolic_array_fp16 ===
+
+   Number of wires:              11247
+   Number of wire bits:          11628
+   Number of public wires:         405
+   Number of public wire bits:     786
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11498
+     sky130_fd_sc_hd__a2111o_2       1
+     sky130_fd_sc_hd__a211o_2       58
+     sky130_fd_sc_hd__a211oi_2      67
+     sky130_fd_sc_hd__a21bo_2      314
+     sky130_fd_sc_hd__a21boi_2      51
+     sky130_fd_sc_hd__a21o_2       764
+     sky130_fd_sc_hd__a21oi_2      386
+     sky130_fd_sc_hd__a22o_2       493
+     sky130_fd_sc_hd__a22oi_2       96
+     sky130_fd_sc_hd__a2bb2o_2       4
+     sky130_fd_sc_hd__a311o_2       30
+     sky130_fd_sc_hd__a31o_2       135
+     sky130_fd_sc_hd__a31oi_2       31
+     sky130_fd_sc_hd__a32o_2       137
+     sky130_fd_sc_hd__a32oi_2        2
+     sky130_fd_sc_hd__a41o_2        30
+     sky130_fd_sc_hd__and2_2       332
+     sky130_fd_sc_hd__and2b_2      252
+     sky130_fd_sc_hd__and3_2       512
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__and4_2       192
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__and4bb_2       7
+     sky130_fd_sc_hd__buf_1        854
+     sky130_fd_sc_hd__dfrtp_2      640
+     sky130_fd_sc_hd__inv_2        772
+     sky130_fd_sc_hd__mux2_2       190
+     sky130_fd_sc_hd__nand2_2      852
+     sky130_fd_sc_hd__nand3_2      580
+     sky130_fd_sc_hd__nand3b_2      15
+     sky130_fd_sc_hd__nand4_2      361
+     sky130_fd_sc_hd__nor2_2       420
+     sky130_fd_sc_hd__nor3_2        85
+     sky130_fd_sc_hd__o211a_2      102
+     sky130_fd_sc_hd__o211ai_2      27
+     sky130_fd_sc_hd__o21a_2       217
+     sky130_fd_sc_hd__o21ai_2      106
+     sky130_fd_sc_hd__o21ba_2       47
+     sky130_fd_sc_hd__o21bai_2      63
+     sky130_fd_sc_hd__o221a_2       32
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o22ai_2        1
+     sky130_fd_sc_hd__o2bb2a_2      20
+     sky130_fd_sc_hd__o31a_2        20
+     sky130_fd_sc_hd__o31ai_2       15
+     sky130_fd_sc_hd__o32ai_2       14
+     sky130_fd_sc_hd__or2_2        316
+     sky130_fd_sc_hd__or2b_2       173
+     sky130_fd_sc_hd__or3_2         93
+     sky130_fd_sc_hd__or3b_2        18
+     sky130_fd_sc_hd__or4bb_2       18
+     sky130_fd_sc_hd__xnor2_2     1047
+     sky130_fd_sc_hd__xor2_2       502
+
+   Chip area for module '\systolic_array_fp16': 116525.507200
+
+62. Executing Verilog backend.
+Dumping module `\systolic_array_fp16'.
+
+Warnings: 256 unique messages, 256 total
+End of script. Logfile hash: eff8c85af7, CPU: user 5.87s system 0.12s, MEM: 89.04 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+Time spent: 77% 2x abc (18 sec), 6% 20x opt_expr (1 sec), ...

@@ -1,0 +1,113 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/placement/systolic_array_fp16.odb'…
+define_corners Slowest Typical Fastest
+read_liberty -corner Slowest /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/cts/cts-slowest.lib
+read_liberty -corner Typical /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/cts/cts.lib
+read_liberty -corner Fastest /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/cts/cts-fastest.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/tmp/placement/9-resizer.sdc'…
+[INFO]: Setting RC values...
+[INFO]: Configuring cts characterization...
+[INFO]: Performing clock tree synthesis...
+[INFO]: Looking for the following net(s): clk
+[INFO]: Running Clock Tree Synthesis...
+[INFO CTS-0049] Characterization buffer is: sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0038] Number of created patterns = 50000.
+[INFO CTS-0038] Number of created patterns = 100000.
+[INFO CTS-0039] Number of created patterns = 141984.
+[INFO CTS-0084] Compiling LUT.
+Min. len    Max. len    Min. cap    Max. cap    Min. slew   Max. slew
+2           8           1           35          1           12          
+[WARNING CTS-0043] 4896 wires are pure wire and no slew degradation.
+TritonCTS forced slew degradation on these wires.
+[INFO CTS-0046]     Number of wire segments: 141984.
+[INFO CTS-0047]     Number of keys in characterization LUT: 1624.
+[INFO CTS-0048]     Actual min input cap: 1.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 640 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 2 buffer(s) types.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 640.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13000  dbu (13 um).
+[INFO CTS-0019]  Total number of sinks after clustering: 100.
+[INFO CTS-0024]  Normalized sink region: [(48.4229, 56.3831), (102.53, 100.272)].
+[INFO CTS-0025]     Width:  54.1067.
+[INFO CTS-0026]     Height: 43.8885.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 50
+    Sub-region size: 27.0533 X 43.8885
+[INFO CTS-0034]     Segment length (rounded): 14.
+    Key: 4140 inSlew: 1 inCap: 2 outSlew: 2 load: 1 length: 8 delay: 1
+    Key: 1029 inSlew: 1 inCap: 1 outSlew: 2 load: 1 length: 6 delay: 1
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 25
+    Sub-region size: 27.0533 X 21.9442
+[INFO CTS-0034]     Segment length (rounded): 10.
+    Key: 4143 inSlew: 2 inCap: 2 outSlew: 3 load: 1 length: 8 delay: 1
+    Key: 2 inSlew: 3 inCap: 1 outSlew: 1 load: 1 length: 2 delay: 9
+      location: 1.0 buffer: sky130_fd_sc_hd__clkbuf_8
+ Out of 48 sinks, 2 sinks closer to other cluster.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 13
+    Sub-region size: 13.5267 X 21.9442
+[INFO CTS-0034]     Segment length (rounded): 6.
+    Key: 1029 inSlew: 1 inCap: 1 outSlew: 2 load: 1 length: 6 delay: 1
+ Out of 24 sinks, 2 sinks closer to other cluster.
+ Out of 28 sinks, 2 sinks closer to other cluster.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 100.
+[INFO CTS-0018]     Created 102 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 4.
+[INFO CTS-0015]     Created 102 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 2:6, 3:9, 4:10, 5:6, 6:11, 7:10, 8:10, 9:9, 10:7, 11:3, 12:6, 13:2, 14:5, 16:2, 20:1..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 640
+[INFO CTS-0100]  Leaf buffers 89
+[INFO CTS-0101]  Average sink wire length 1563.88 um
+[INFO CTS-0102]  Path depth 3 - 4
+[INFO]: Repairing long wires on clock nets...
+[INFO RSZ-0058] Using max wire length 4508um.
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.odb'…
+Writing layout to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.def'…
+Writing timing constraints to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.sdc'…
+[INFO]: Legalizing...
+Placement Analysis
+---------------------------------
+total displacement        595.6 u
+average displacement        0.0 u
+max displacement            7.8 u
+original HPWL          824649.5 u
+legalized HPWL         836097.8 u
+delta HPWL                    1 %
+
+[INFO DPL-0020] Mirrored 5325 instances
+[INFO DPL-0021] HPWL before          836097.8 u
+[INFO DPL-0022] HPWL after           824706.9 u
+[INFO DPL-0023] HPWL delta               -1.4 %
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.odb'…
+Writing layout to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.def'…
+Writing timing constraints to '/home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/cts/systolic_array_fp16.sdc'…
+cts_report
+[INFO CTS-0003] Total number of Clock Roots: 1.
+[INFO CTS-0004] Total number of Buffers Inserted: 102.
+[INFO CTS-0005] Total number of Clock Subnets: 102.
+[INFO CTS-0006] Total number of Sinks: 640.
+cts_report_end

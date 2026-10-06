@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "systolic_array_fp16",
+    "VERILOG_FILES": "dir::src/systolic_array_fp16.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 15.0,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 2000 2000",
+    "PL_TARGET_DENSITY": 0.40
+}

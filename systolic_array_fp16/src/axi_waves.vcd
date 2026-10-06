@@ -1,0 +1,1197 @@
+$date
+	Tue Oct  6 23:33:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_axi_wrapper $end
+$var wire 1 ! s_axis_tready $end
+$var wire 1 " m_axis_tvalid $end
+$var wire 256 # m_axis_tdata [255:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % m_axis_tready $end
+$var reg 1 & resetn $end
+$var reg 128 ' s_axis_tdata [127:0] $end
+$var reg 1 ( s_axis_tvalid $end
+$scope module uut $end
+$var wire 1 $ clk $end
+$var wire 1 % m_axis_tready $end
+$var wire 1 & resetn $end
+$var wire 1 ) rst $end
+$var wire 128 * s_axis_tdata [127:0] $end
+$var wire 1 ( s_axis_tvalid $end
+$var wire 64 + weights_in [63:0] $end
+$var wire 256 , m_axis_tdata [255:0] $end
+$var wire 64 - acts_in [63:0] $end
+$var reg 1 " m_axis_tvalid $end
+$var reg 1 ! s_axis_tready $end
+$scope module tpu_core $end
+$var wire 64 . acts_in [63:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 64 / weights_in [63:0] $end
+$var wire 256 0 results [255:0] $end
+$scope begin edges[0] $end
+$var parameter 2 1 i $end
+$upscope $end
+$scope begin edges[1] $end
+$var parameter 2 2 i $end
+$upscope $end
+$scope begin edges[2] $end
+$var parameter 3 3 i $end
+$upscope $end
+$scope begin edges[3] $end
+$var parameter 3 4 i $end
+$upscope $end
+$scope begin row[0] $end
+$var parameter 2 5 i $end
+$scope begin col[0] $end
+$var parameter 2 6 j $end
+$scope module pe $end
+$var wire 16 7 a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 8 w_in [15:0] $end
+$var wire 16 9 result [15:0] $end
+$var reg 16 : a_out [15:0] $end
+$var reg 16 ; w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 < activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 = res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 > weight [15:0] $end
+$var wire 1 ? w_sign $end
+$var wire 11 @ w_frac [10:0] $end
+$var wire 5 A w_exp [4:0] $end
+$var wire 22 B res_frac [21:0] $end
+$var wire 6 C res_exp [5:0] $end
+$var wire 1 D a_sign $end
+$var wire 11 E a_frac [10:0] $end
+$var wire 5 F a_exp [4:0] $end
+$var reg 16 G result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[1] $end
+$var parameter 2 H j $end
+$scope module pe $end
+$var wire 16 I a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 J w_in [15:0] $end
+$var wire 16 K result [15:0] $end
+$var reg 16 L a_out [15:0] $end
+$var reg 16 M w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 N activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 O res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 P weight [15:0] $end
+$var wire 1 Q w_sign $end
+$var wire 11 R w_frac [10:0] $end
+$var wire 5 S w_exp [4:0] $end
+$var wire 22 T res_frac [21:0] $end
+$var wire 6 U res_exp [5:0] $end
+$var wire 1 V a_sign $end
+$var wire 11 W a_frac [10:0] $end
+$var wire 5 X a_exp [4:0] $end
+$var reg 16 Y result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[2] $end
+$var parameter 3 Z j $end
+$scope module pe $end
+$var wire 16 [ a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 \ w_in [15:0] $end
+$var wire 16 ] result [15:0] $end
+$var reg 16 ^ a_out [15:0] $end
+$var reg 16 _ w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 ` activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 a res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 b weight [15:0] $end
+$var wire 1 c w_sign $end
+$var wire 11 d w_frac [10:0] $end
+$var wire 5 e w_exp [4:0] $end
+$var wire 22 f res_frac [21:0] $end
+$var wire 6 g res_exp [5:0] $end
+$var wire 1 h a_sign $end
+$var wire 11 i a_frac [10:0] $end
+$var wire 5 j a_exp [4:0] $end
+$var reg 16 k result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[3] $end
+$var parameter 3 l j $end
+$scope module pe $end
+$var wire 16 m a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 n w_in [15:0] $end
+$var wire 16 o result [15:0] $end
+$var reg 16 p a_out [15:0] $end
+$var reg 16 q w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 r activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 s res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 t weight [15:0] $end
+$var wire 1 u w_sign $end
+$var wire 11 v w_frac [10:0] $end
+$var wire 5 w w_exp [4:0] $end
+$var wire 22 x res_frac [21:0] $end
+$var wire 6 y res_exp [5:0] $end
+$var wire 1 z a_sign $end
+$var wire 11 { a_frac [10:0] $end
+$var wire 5 | a_exp [4:0] $end
+$var reg 16 } result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin row[1] $end
+$var parameter 2 ~ i $end
+$scope begin col[0] $end
+$var parameter 2 !" j $end
+$scope module pe $end
+$var wire 16 "" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 #" w_in [15:0] $end
+$var wire 16 $" result [15:0] $end
+$var reg 16 %" a_out [15:0] $end
+$var reg 16 &" w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 '" activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 (" res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 )" weight [15:0] $end
+$var wire 1 *" w_sign $end
+$var wire 11 +" w_frac [10:0] $end
+$var wire 5 ," w_exp [4:0] $end
+$var wire 22 -" res_frac [21:0] $end
+$var wire 6 ." res_exp [5:0] $end
+$var wire 1 /" a_sign $end
+$var wire 11 0" a_frac [10:0] $end
+$var wire 5 1" a_exp [4:0] $end
+$var reg 16 2" result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[1] $end
+$var parameter 2 3" j $end
+$scope module pe $end
+$var wire 16 4" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 5" w_in [15:0] $end
+$var wire 16 6" result [15:0] $end
+$var reg 16 7" a_out [15:0] $end
+$var reg 16 8" w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 9" activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 :" res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 ;" weight [15:0] $end
+$var wire 1 <" w_sign $end
+$var wire 11 =" w_frac [10:0] $end
+$var wire 5 >" w_exp [4:0] $end
+$var wire 22 ?" res_frac [21:0] $end
+$var wire 6 @" res_exp [5:0] $end
+$var wire 1 A" a_sign $end
+$var wire 11 B" a_frac [10:0] $end
+$var wire 5 C" a_exp [4:0] $end
+$var reg 16 D" result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[2] $end
+$var parameter 3 E" j $end
+$scope module pe $end
+$var wire 16 F" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 G" w_in [15:0] $end
+$var wire 16 H" result [15:0] $end
+$var reg 16 I" a_out [15:0] $end
+$var reg 16 J" w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 K" activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 L" res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 M" weight [15:0] $end
+$var wire 1 N" w_sign $end
+$var wire 11 O" w_frac [10:0] $end
+$var wire 5 P" w_exp [4:0] $end
+$var wire 22 Q" res_frac [21:0] $end
+$var wire 6 R" res_exp [5:0] $end
+$var wire 1 S" a_sign $end
+$var wire 11 T" a_frac [10:0] $end
+$var wire 5 U" a_exp [4:0] $end
+$var reg 16 V" result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[3] $end
+$var parameter 3 W" j $end
+$scope module pe $end
+$var wire 16 X" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 Y" w_in [15:0] $end
+$var wire 16 Z" result [15:0] $end
+$var reg 16 [" a_out [15:0] $end
+$var reg 16 \" w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 ]" activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ^" res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 _" weight [15:0] $end
+$var wire 1 `" w_sign $end
+$var wire 11 a" w_frac [10:0] $end
+$var wire 5 b" w_exp [4:0] $end
+$var wire 22 c" res_frac [21:0] $end
+$var wire 6 d" res_exp [5:0] $end
+$var wire 1 e" a_sign $end
+$var wire 11 f" a_frac [10:0] $end
+$var wire 5 g" a_exp [4:0] $end
+$var reg 16 h" result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin row[2] $end
+$var parameter 3 i" i $end
+$scope begin col[0] $end
+$var parameter 2 j" j $end
+$scope module pe $end
+$var wire 16 k" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 l" w_in [15:0] $end
+$var wire 16 m" result [15:0] $end
+$var reg 16 n" a_out [15:0] $end
+$var reg 16 o" w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 p" activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 q" res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 r" weight [15:0] $end
+$var wire 1 s" w_sign $end
+$var wire 11 t" w_frac [10:0] $end
+$var wire 5 u" w_exp [4:0] $end
+$var wire 22 v" res_frac [21:0] $end
+$var wire 6 w" res_exp [5:0] $end
+$var wire 1 x" a_sign $end
+$var wire 11 y" a_frac [10:0] $end
+$var wire 5 z" a_exp [4:0] $end
+$var reg 16 {" result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[1] $end
+$var parameter 2 |" j $end
+$scope module pe $end
+$var wire 16 }" a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 ~" w_in [15:0] $end
+$var wire 16 !# result [15:0] $end
+$var reg 16 "# a_out [15:0] $end
+$var reg 16 ## w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 $# activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 %# res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 &# weight [15:0] $end
+$var wire 1 '# w_sign $end
+$var wire 11 (# w_frac [10:0] $end
+$var wire 5 )# w_exp [4:0] $end
+$var wire 22 *# res_frac [21:0] $end
+$var wire 6 +# res_exp [5:0] $end
+$var wire 1 ,# a_sign $end
+$var wire 11 -# a_frac [10:0] $end
+$var wire 5 .# a_exp [4:0] $end
+$var reg 16 /# result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[2] $end
+$var parameter 3 0# j $end
+$scope module pe $end
+$var wire 16 1# a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 2# w_in [15:0] $end
+$var wire 16 3# result [15:0] $end
+$var reg 16 4# a_out [15:0] $end
+$var reg 16 5# w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 6# activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 7# res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 8# weight [15:0] $end
+$var wire 1 9# w_sign $end
+$var wire 11 :# w_frac [10:0] $end
+$var wire 5 ;# w_exp [4:0] $end
+$var wire 22 <# res_frac [21:0] $end
+$var wire 6 =# res_exp [5:0] $end
+$var wire 1 ># a_sign $end
+$var wire 11 ?# a_frac [10:0] $end
+$var wire 5 @# a_exp [4:0] $end
+$var reg 16 A# result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[3] $end
+$var parameter 3 B# j $end
+$scope module pe $end
+$var wire 16 C# a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 D# w_in [15:0] $end
+$var wire 16 E# result [15:0] $end
+$var reg 16 F# a_out [15:0] $end
+$var reg 16 G# w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 H# activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 I# res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 J# weight [15:0] $end
+$var wire 1 K# w_sign $end
+$var wire 11 L# w_frac [10:0] $end
+$var wire 5 M# w_exp [4:0] $end
+$var wire 22 N# res_frac [21:0] $end
+$var wire 6 O# res_exp [5:0] $end
+$var wire 1 P# a_sign $end
+$var wire 11 Q# a_frac [10:0] $end
+$var wire 5 R# a_exp [4:0] $end
+$var reg 16 S# result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin row[3] $end
+$var parameter 3 T# i $end
+$scope begin col[0] $end
+$var parameter 2 U# j $end
+$scope module pe $end
+$var wire 16 V# a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 W# w_in [15:0] $end
+$var wire 16 X# result [15:0] $end
+$var reg 16 Y# a_out [15:0] $end
+$var reg 16 Z# w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 [# activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 \# res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 ]# weight [15:0] $end
+$var wire 1 ^# w_sign $end
+$var wire 11 _# w_frac [10:0] $end
+$var wire 5 `# w_exp [4:0] $end
+$var wire 22 a# res_frac [21:0] $end
+$var wire 6 b# res_exp [5:0] $end
+$var wire 1 c# a_sign $end
+$var wire 11 d# a_frac [10:0] $end
+$var wire 5 e# a_exp [4:0] $end
+$var reg 16 f# result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[1] $end
+$var parameter 2 g# j $end
+$scope module pe $end
+$var wire 16 h# a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 i# w_in [15:0] $end
+$var wire 16 j# result [15:0] $end
+$var reg 16 k# a_out [15:0] $end
+$var reg 16 l# w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 m# activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 n# res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 o# weight [15:0] $end
+$var wire 1 p# w_sign $end
+$var wire 11 q# w_frac [10:0] $end
+$var wire 5 r# w_exp [4:0] $end
+$var wire 22 s# res_frac [21:0] $end
+$var wire 6 t# res_exp [5:0] $end
+$var wire 1 u# a_sign $end
+$var wire 11 v# a_frac [10:0] $end
+$var wire 5 w# a_exp [4:0] $end
+$var reg 16 x# result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[2] $end
+$var parameter 3 y# j $end
+$scope module pe $end
+$var wire 16 z# a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 {# w_in [15:0] $end
+$var wire 16 |# result [15:0] $end
+$var reg 16 }# a_out [15:0] $end
+$var reg 16 ~# w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 !$ activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 "$ res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 #$ weight [15:0] $end
+$var wire 1 $$ w_sign $end
+$var wire 11 %$ w_frac [10:0] $end
+$var wire 5 &$ w_exp [4:0] $end
+$var wire 22 '$ res_frac [21:0] $end
+$var wire 6 ($ res_exp [5:0] $end
+$var wire 1 )$ a_sign $end
+$var wire 11 *$ a_frac [10:0] $end
+$var wire 5 +$ a_exp [4:0] $end
+$var reg 16 ,$ result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin col[3] $end
+$var parameter 3 -$ j $end
+$scope module pe $end
+$var wire 16 .$ a_in [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 ) reset $end
+$var wire 16 /$ w_in [15:0] $end
+$var wire 16 0$ result [15:0] $end
+$var reg 16 1$ a_out [15:0] $end
+$var reg 16 2$ w_out [15:0] $end
+$scope module fp16_core $end
+$var wire 16 3$ activation [15:0] $end
+$var wire 1 $ clk $end
+$var wire 1 4$ res_sign $end
+$var wire 1 ) reset $end
+$var wire 16 5$ weight [15:0] $end
+$var wire 1 6$ w_sign $end
+$var wire 11 7$ w_frac [10:0] $end
+$var wire 5 8$ w_exp [4:0] $end
+$var wire 22 9$ res_frac [21:0] $end
+$var wire 6 :$ res_exp [5:0] $end
+$var wire 1 ;$ a_sign $end
+$var wire 11 <$ a_frac [10:0] $end
+$var wire 5 =$ a_exp [4:0] $end
+$var reg 16 >$ result [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 -$
+b10 y#
+b1 g#
+b0 U#
+b11 T#
+b11 B#
+b10 0#
+b1 |"
+b0 j"
+b10 i"
+b11 W"
+b10 E"
+b1 3"
+b0 !"
+b1 ~
+b11 l
+b10 Z
+b1 H
+b0 6
+b0 5
+b11 4
+b10 3
+b1 2
+b0 1
+$end
+#0
+$dumpvars
+b0 >$
+b0 =$
+b10000000000 <$
+0;$
+b110001 :$
+b100000000000000000000 9$
+b0 8$
+b10000000000 7$
+06$
+b0 5$
+04$
+b0 3$
+b0 2$
+b0 1$
+b0 0$
+b0 /$
+b0 .$
+b0 ,$
+b0 +$
+b10000000000 *$
+0)$
+b110001 ($
+b100000000000000000000 '$
+b0 &$
+b10000000000 %$
+0$$
+b0 #$
+0"$
+b0 !$
+b0 ~#
+b0 }#
+b0 |#
+b0 {#
+b0 z#
+b0 x#
+b0 w#
+b10000000000 v#
+0u#
+b110001 t#
+b100000000000000000000 s#
+b0 r#
+b10000000000 q#
+0p#
+b0 o#
+0n#
+b0 m#
+b0 l#
+b0 k#
+b0 j#
+b0 i#
+b0 h#
+b0 f#
+b0 e#
+b10000000000 d#
+0c#
+b110001 b#
+b100000000000000000000 a#
+b0 `#
+b10000000000 _#
+0^#
+b0 ]#
+0\#
+b0 [#
+b0 Z#
+b0 Y#
+b0 X#
+b0 W#
+b0 V#
+b0 S#
+b0 R#
+b10000000000 Q#
+0P#
+b110001 O#
+b100000000000000000000 N#
+b0 M#
+b10000000000 L#
+0K#
+b0 J#
+0I#
+b0 H#
+b0 G#
+b0 F#
+b0 E#
+b0 D#
+b0 C#
+b0 A#
+b0 @#
+b10000000000 ?#
+0>#
+b110001 =#
+b100000000000000000000 <#
+b0 ;#
+b10000000000 :#
+09#
+b0 8#
+07#
+b0 6#
+b0 5#
+b0 4#
+b0 3#
+b0 2#
+b0 1#
+b0 /#
+b0 .#
+b10000000000 -#
+0,#
+b110001 +#
+b100000000000000000000 *#
+b0 )#
+b10000000000 (#
+0'#
+b0 &#
+0%#
+b0 $#
+b0 ##
+b0 "#
+b0 !#
+b0 ~"
+b0 }"
+b0 {"
+b0 z"
+b10000000000 y"
+0x"
+b110001 w"
+b100000000000000000000 v"
+b0 u"
+b10000000000 t"
+0s"
+b0 r"
+0q"
+b0 p"
+b0 o"
+b0 n"
+b0 m"
+b0 l"
+b0 k"
+b0 h"
+b0 g"
+b10000000000 f"
+0e"
+b110001 d"
+b100000000000000000000 c"
+b0 b"
+b10000000000 a"
+0`"
+b0 _"
+0^"
+b0 ]"
+b0 \"
+b0 ["
+b0 Z"
+b0 Y"
+b0 X"
+b0 V"
+b0 U"
+b10000000000 T"
+0S"
+b110001 R"
+b100000000000000000000 Q"
+b0 P"
+b10000000000 O"
+0N"
+b0 M"
+0L"
+b0 K"
+b0 J"
+b0 I"
+b0 H"
+b0 G"
+b0 F"
+b0 D"
+b0 C"
+b10000000000 B"
+0A"
+b110001 @"
+b100000000000000000000 ?"
+b0 >"
+b10000000000 ="
+0<"
+b0 ;"
+0:"
+b0 9"
+b0 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 2"
+b0 1"
+b10000000000 0"
+0/"
+b110001 ."
+b100000000000000000000 -"
+b0 ,"
+b10000000000 +"
+0*"
+b0 )"
+0("
+b0 '"
+b0 &"
+b0 %"
+b0 $"
+b0 #"
+b0 ""
+b0 }
+b0 |
+b10000000000 {
+0z
+b110001 y
+b100000000000000000000 x
+b0 w
+b10000000000 v
+0u
+b0 t
+0s
+b0 r
+b0 q
+b0 p
+b0 o
+b0 n
+b0 m
+b0 k
+b0 j
+b10000000000 i
+0h
+b110001 g
+b100000000000000000000 f
+b0 e
+b10000000000 d
+0c
+b0 b
+0a
+b0 `
+b0 _
+b0 ^
+b0 ]
+b0 \
+b0 [
+b0 Y
+b0 X
+b10000000000 W
+0V
+b110001 U
+b100000000000000000000 T
+b0 S
+b10000000000 R
+0Q
+b0 P
+0O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 G
+b0 F
+b10000000000 E
+0D
+b110001 C
+b100000000000000000000 B
+b0 A
+b10000000000 @
+0?
+b0 >
+0=
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+1)
+0(
+b0 '
+0&
+0%
+0$
+b0 #
+0"
+0!
+$end
+#5000
+1$
+#10000
+0$
+#15000
+1$
+#20000
+0)
+0$
+1&
+#25000
+b100010000000000 0$
+b100010000000000 >$
+b100010000000000 |#
+b100010000000000 ,$
+b100010000000000 j#
+b100010000000000 x#
+b100010000000000 X#
+b100010000000000 f#
+b100010000000000 E#
+b100010000000000 S#
+b100010000000000 3#
+b100010000000000 A#
+b100010000000000 !#
+b100010000000000 /#
+b100010000000000 m"
+b100010000000000 {"
+b100010000000000 Z"
+b100010000000000 h"
+b100010000000000 H"
+b100010000000000 V"
+b100010000000000 6"
+b100010000000000 D"
+b100010000000000 $"
+b100010000000000 2"
+b100010000000000 o
+b100010000000000 }
+b100010000000000 ]
+b100010000000000 k
+b100010000000000 K
+b100010000000000 Y
+b100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000 #
+b100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000 ,
+b100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000010001000000000001000100000000000100010000000000 0
+b100010000000000 9
+b100010000000000 G
+1!
+1%
+1$
+#30000
+0$
+#35000
+1"
+b1111 A
+b110000000000000000000 B
+b11000000000 @
+b0 ."
+b1111 ,"
+b110000000000000000000 -"
+b11000000000 +"
+b0 w"
+b1111 u"
+b110000000000000000000 v"
+b11000000000 t"
+b0 b#
+b1111 `#
+b110000000000000000000 a#
+b11000000000 _#
+b10000 C
+b10000 F
+b1 U
+b10000 X
+b1 g
+b10000 j
+b1 y
+b10000 |
+b11111000000000 8
+b11111000000000 >
+b11111000000000 #"
+b11111000000000 )"
+b11111000000000 l"
+b11111000000000 r"
+b11111000000000 W#
+b11111000000000 ]#
+b100000000000000 7
+b100000000000000 <
+b100000000000000 I
+b100000000000000 N
+b100000000000000 [
+b100000000000000 `
+b100000000000000 m
+b100000000000000 r
+b11111000000000001111100000000000111110000000000011111000000000 +
+b11111000000000001111100000000000111110000000000011111000000000 /
+b100000000000000010000000000000001000000000000000100000000000000 -
+b100000000000000010000000000000001000000000000000100000000000000 .
+b111110000000000011111000000000001111100000000000111110000000000100000000000000010000000000000001000000000000000100000000000000 '
+b111110000000000011111000000000001111100000000000111110000000000100000000000000010000000000000001000000000000000100000000000000 *
+1(
+1$
+#40000
+0$
+#45000
+b0 t#
+b1111 r#
+b110000000000000000000 s#
+b11000000000 q#
+b0 +#
+b1111 )#
+b110000000000000000000 *#
+b11000000000 (#
+b1111 >"
+b110000000000000000000 ?"
+b11000000000 ="
+b1 d"
+b10000 g"
+b1 R"
+b10000 U"
+b10000 @"
+b10000 C"
+b10000 ."
+b10000 1"
+b10000 U
+b1111 S
+b110000000000000000000 T
+b11000000000 R
+b11111000000000 Z#
+b11111000000000 i#
+b11111000000000 o#
+b1000000000 X#
+b1000000000 f#
+b11111000000000 o"
+b11111000000000 ~"
+b11111000000000 &#
+b1000000000 m"
+b1000000000 {"
+b11111000000000 &"
+b11111000000000 5"
+b11111000000000 ;"
+b1000000000 $"
+b1000000000 2"
+b100000000000000 p
+b100000000000000 X"
+b100000000000000 ]"
+b10000000000 o
+b10000000000 }
+b100000000000000 ^
+b100000000000000 F"
+b100000000000000 K"
+b10000000000 ]
+b10000000000 k
+b100000000000000 L
+b100000000000000 4"
+b100000000000000 9"
+b10000000000 K
+b10000000000 Y
+b100000000000000 :
+b100000000000000 ""
+b100000000000000 '"
+b11111000000000 ;
+b11111000000000 J
+b11111000000000 P
+b100010000000000010001000000000001000100000000000000001000000000010001000000000001000100000000000100010000000000000000100000000001000100000000000100010000000000010001000000000000000010000000000000010000000000000001000000000000000100000000000100001000000000 #
+b100010000000000010001000000000001000100000000000000001000000000010001000000000001000100000000000100010000000000000000100000000001000100000000000100010000000000010001000000000000000010000000000000010000000000000001000000000000000100000000000100001000000000 ,
+b100010000000000010001000000000001000100000000000000001000000000010001000000000001000100000000000100010000000000000000100000000001000100000000000100010000000000010001000000000000000010000000000000010000000000000001000000000000000100000000000100001000000000 0
+b100001000000000 9
+b100001000000000 G
+0"
+0(
+1$
+#50000
+0$
+#55000
+b10000 g
+b1111 e
+b110000000000000000000 f
+b11000000000 d
+b10000 w"
+b10000 z"
+b10000 +#
+b10000 .#
+b10000 R"
+b1111 P"
+b110000000000000000000 Q"
+b11000000000 O"
+b10000 @#
+b1 O#
+b10000 R#
+b10000 =#
+b1111 ;#
+b110000000000000000000 <#
+b11000000000 :#
+b0 ($
+b1111 &$
+b110000000000000000000 '$
+b11000000000 %$
+b100001000000000 K
+b100001000000000 Y
+b11111000000000 M
+b11111000000000 \
+b11111000000000 b
+b100001000000000 $"
+b100001000000000 2"
+b100000000000000 %"
+b100000000000000 k"
+b100000000000000 p"
+b100001000000000 6"
+b100001000000000 D"
+b100000000000000 7"
+b100000000000000 }"
+b100000000000000 $#
+b11111000000000 8"
+b11111000000000 G"
+b11111000000000 M"
+b10000000000 H"
+b10000000000 V"
+b100000000000000 I"
+b100000000000000 1#
+b100000000000000 6#
+b10000000000 Z"
+b10000000000 h"
+b100000000000000 ["
+b100000000000000 C#
+b100000000000000 H#
+b1000000000 !#
+b1000000000 /#
+b11111000000000 ##
+b11111000000000 2#
+b11111000000000 8#
+b100010000000000010001000000000000000010000000000000001000000000010001000000000001000100000000000000001000000000000000100000000000000100000000000000010000000000010000100000000001000010000000000000010000000000000001000000000001000010000000000100001000000000 #
+b100010000000000010001000000000000000010000000000000001000000000010001000000000001000100000000000000001000000000000000100000000000000100000000000000010000000000010000100000000001000010000000000000010000000000000001000000000001000010000000000100001000000000 ,
+b100010000000000010001000000000000000010000000000000001000000000010001000000000001000100000000000000001000000000000000100000000000000100000000000000010000000000010000100000000001000010000000000000010000000000000001000000000001000010000000000100001000000000 0
+b1000000000 j#
+b1000000000 x#
+b11111000000000 l#
+b11111000000000 {#
+b11111000000000 #$
+1$
+#60000
+0$
+#65000
+b1111 8$
+b110000000000000000000 9$
+b11000000000 7$
+b10000 :$
+b10000 =$
+b10000 ($
+b10000 +$
+b10000 O#
+b1111 M#
+b110000000000000000000 N#
+b11000000000 L#
+b10000 t#
+b10000 w#
+b10000 b#
+b10000 e#
+b10000 d"
+b1111 b"
+b110000000000000000000 c"
+b11000000000 a"
+b10000 y
+b1111 w
+b110000000000000000000 x
+b11000000000 v
+b11111000000000 ~#
+b11111000000000 /$
+b11111000000000 5$
+b1000000000 |#
+b1000000000 ,$
+b100000000000000 F#
+b100000000000000 .$
+b100000000000000 3$
+b10000000000 E#
+b10000000000 S#
+b100000000000000 4#
+b100000000000000 z#
+b100000000000000 !$
+b11111000000000 5#
+b11111000000000 D#
+b11111000000000 J#
+b100001000000000 3#
+b100001000000000 A#
+b100000000000000 "#
+b100000000000000 h#
+b100000000000000 m#
+b100001000000000 !#
+b100001000000000 /#
+b100000000000000 n"
+b100000000000000 V#
+b100000000000000 [#
+b100001000000000 m"
+b100001000000000 {"
+b11111000000000 J"
+b11111000000000 Y"
+b11111000000000 _"
+b100001000000000 H"
+b100001000000000 V"
+b11111000000000 _
+b11111000000000 n
+b11111000000000 t
+b100010000000000000000100000000000000010000000000000001000000000000001000000000001000010000000000100001000000000010000100000000000000100000000000100001000000000010000100000000001000010000000000000010000000000010000100000000001000010000000000100001000000000 #
+b100010000000000000000100000000000000010000000000000001000000000000001000000000001000010000000000100001000000000010000100000000000000100000000000100001000000000010000100000000001000010000000000000010000000000010000100000000001000010000000000100001000000000 ,
+b100010000000000000000100000000000000010000000000000001000000000000001000000000001000010000000000100001000000000010000100000000000000100000000000100001000000000010000100000000001000010000000000000010000000000010000100000000001000010000000000100001000000000 0
+b100001000000000 ]
+b100001000000000 k
+1$
+#70000
+0$
+#75000
+b100001000000000 o
+b100001000000000 }
+b11111000000000 q
+b100001000000000 Z"
+b100001000000000 h"
+b11111000000000 \"
+b100001000000000 E#
+b100001000000000 S#
+b11111000000000 G#
+b100001000000000 X#
+b100001000000000 f#
+b100000000000000 Y#
+b100001000000000 j#
+b100001000000000 x#
+b100000000000000 k#
+b100001000000000 |#
+b100001000000000 ,$
+b100000000000000 }#
+b100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000 #
+b100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000 ,
+b100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000010000100000000001000010000000000100001000000000 0
+b100001000000000 0$
+b100001000000000 >$
+b100000000000000 1$
+b11111000000000 2$
+1$
+#80000
+0$
+#85000
+1$
+#90000
+0$
+#95000
+1$
+#100000
+0$
+#105000
+1$
+#110000
+0$
+#115000
+1$
+#120000
+0$
+#125000
+1$
+#130000
+0$
+#135000
+1$
+#140000
+0$
+#145000
+1$
+#150000
+0$
+#155000
+1$

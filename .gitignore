@@ -1,0 +1,8 @@
+# Ignore massive OpenLane physical design databases
+*.odb
+*.mag
+*.ext
+*.gds
+*.lef
+*.spef
+*.cdl

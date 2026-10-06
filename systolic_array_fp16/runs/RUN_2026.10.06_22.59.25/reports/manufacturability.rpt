@@ -1,0 +1,19 @@
+Design Name: systolic_array_fp16
+Run Directory: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/logs/signoff/39-systolic_array_fp16.lef.lvs.log
+Number of nets: 12471                      |Number of nets: 12471                      
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/logs/signoff/41-arc.log
+Pin violations: 90
+Net violations: 86

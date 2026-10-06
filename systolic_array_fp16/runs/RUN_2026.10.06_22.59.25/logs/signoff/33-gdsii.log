@@ -1,0 +1,564 @@
+
+Magic 8.3 revision 413 - Compiled on Wed Jul 12 10:04:40 UTC 2023.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.493-0-g0fe599b
+Reading LEF data from file /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading DEF data from file /home/taman/vlsi-accelerator-portfolio/systolic_array_fp16/runs/RUN_2026.10.06_22.59.25/results/routing/systolic_array_fp16.def.
+This action cannot be undone.
+  Processed 4 vias total.
+Cell sky130_fd_sc_hd__diode_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_3 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_6 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_ef_sc_hd__decap_12 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_8 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21bo_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2b_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__inv_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2b_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ba_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o221a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32ai_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2bb2a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4bb_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32o_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41o_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32ai_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_8 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4bb_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4bb_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4b_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32oi_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32oi_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22a_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2111o_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3b_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2b_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_8 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_6 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_16 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_4 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_2 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd3_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkdlybuf4s25_1 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_12 read from path /home/taman/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+  Processed 405833 subcell instances total.
+  Processed 388 pins total.
+  Processed 2 special nets total.
+  Processed 12469 nets total.
+DEF read: Processed 654989 lines.
+Moving label "_00086_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_00207_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_00228_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_00900_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_00966_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01038_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01048_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_01057_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01059_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01180_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_01233_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01278_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01293_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_01326_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01332_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_01342_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01357_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01388_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01408_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_01431_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01477_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01535_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01544_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01554_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_01555_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01752_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01858_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01860_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_01884_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_01961_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02005_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02012_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02042_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02080_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02086_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02161_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02212_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02344_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02369_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02449_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_02456_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02472_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_02506_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02523_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02575_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02581_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_02599_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_02604_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02677_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02716_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02778_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_02789_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_02791_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_02897_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_02951_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_02953_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03026_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03241_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03247_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03259_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03271_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_03302_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03307_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_03322_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03347_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03358_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03389_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03431_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_03483_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_03678_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03700_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03780_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03845_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03927_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_03941_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04132_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04152_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04162_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04167_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_04204_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_04325_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04328_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04414_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04457_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_04494_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_04642_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04773_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04846_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04899_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04934_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04949_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04959_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_04968_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_04970_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05004_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05053_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05059_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05110_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05187_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05207_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05322_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05393_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05512_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05623_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05638_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05658_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_05670_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05676_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05720_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_05804_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05832_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_05992_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06010_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06145_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06208_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06217_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_06259_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06315_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06330_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_06346_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_06388_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06405_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06592_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06604_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_06608_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_06718_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06745_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06786_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06858_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_06901_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_06904_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_06957_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07009_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07312_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07324_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_07420_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07425_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_07443_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07497_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07511_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_07553_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07571_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07572_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_07764_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_07818_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_07861_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_08015_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_08043_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_08119_" from metal3 to via3 in cell systolic_array_fp16.
+Moving label "_08129_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_08182_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_08219_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08365_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_08460_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08487_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_08508_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_08523_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_08606_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_08767_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08805_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08865_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_08896_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_08939_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08944_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_08984_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09046_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09067_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09091_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09150_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09175_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_09206_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_09282_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09303_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09322_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09448_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_09478_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09521_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09626_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_09705_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09773_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09848_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_09880_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09902_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_09904_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_09963_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_10008_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10064_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10085_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10086_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_10158_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_10215_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_10245_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10274_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10325_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10366_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_10427_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10495_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10539_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10546_" from metal1 to viali in cell systolic_array_fp16.
+Moving label "_10622_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "_10693_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10721_" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "_10808_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10822_" from metal2 to via1 in cell systolic_array_fp16.
+Moving label "_10832_" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "clknet_0_clk" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "clknet_2_0_0_clk" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "clknet_3_0__leaf_clk" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "clknet_leaf_74_clk" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "net10" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net119" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net124" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net128" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net140" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net145" from metal3 to via3 in cell systolic_array_fp16.
+Moving label "net173" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net175" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net243" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net25" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net346" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net351" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net357" from metal1 to viali in cell systolic_array_fp16.
+Moving label "net364" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net4" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net418" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net427" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net49" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net54" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net580" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "net613" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net666" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net81" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "net93" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[107]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[112]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[130]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[131]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[139]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[160]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[175]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[1]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[21]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[228]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[242]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[246]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[252]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[40]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[49]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[79]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[84]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "results[93]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "row\[0\].col\[1\].pe.a_out\[4\]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "row\[1\].col\[1\].pe.a_out\[12\]" from metal1 to viali in cell systolic_array_fp16.
+Moving label "row\[1\].col\[1\].pe.fp16_core.res_sign" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "row\[1\].col\[2\].pe.a_out\[9\]" from metal2 to via2 in cell systolic_array_fp16.
+Moving label "row\[1\].col\[2\].pe.w_out\[10\]" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "row\[2\].col\[0\].pe.w_out\[13\]" from metal1 to viali in cell systolic_array_fp16.
+Moving label "row\[2\].col\[3\].pe.a_out\[12\]" from metal1 to via1 in cell systolic_array_fp16.
+Moving label "weights_in[2]" from metal2 to via2 in cell systolic_array_fp16.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  2000.000 x 2000.000  ( 0.000,  0.000), ( 2000.000,  2000.000)  4000000.000
+lambda:   200000.00 x 200000.00  (  0.00,  0.00 ), ( 200000.00,  200000.00)  40000000000.00
+internal: 400000 x 400000  (     0,  0    ), ( 400000,  400000)  160000000000
+   Generating output for cell sky130_fd_sc_hd__decap_8
+   Generating output for cell sky130_ef_sc_hd__decap_12
+   Generating output for cell sky130_fd_sc_hd__decap_3
+   Generating output for cell sky130_fd_sc_hd__buf_12
+   Generating output for cell sky130_fd_sc_hd__fill_1
+   Generating output for cell sky130_fd_sc_hd__decap_4
+   Generating output for cell sky130_fd_sc_hd__tapvpwrvgnd_1
+   Generating output for cell sky130_fd_sc_hd__clkbuf_4
+   Generating output for cell sky130_fd_sc_hd__fill_2
+   Generating output for cell sky130_fd_sc_hd__diode_2
+   Generating output for cell sky130_fd_sc_hd__decap_6
+   Generating output for cell sky130_fd_sc_hd__clkbuf_16
+   Generating output for cell sky130_fd_sc_hd__buf_8
+   Generating output for cell sky130_fd_sc_hd__buf_6
+   Generating output for cell sky130_fd_sc_hd__buf_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_1
+   Generating output for cell sky130_fd_sc_hd__a21oi_1
+   Generating output for cell sky130_fd_sc_hd__or2_2
+   Generating output for cell sky130_fd_sc_hd__inv_2
+   Generating output for cell sky130_fd_sc_hd__and2b_1
+   Generating output for cell sky130_fd_sc_hd__or3_1
+   Generating output for cell sky130_fd_sc_hd__dfrtp_4
+   Generating output for cell sky130_fd_sc_hd__o31a_1
+   Generating output for cell sky130_fd_sc_hd__xnor2_1
+   Generating output for cell sky130_fd_sc_hd__xor2_2
+   Generating output for cell sky130_fd_sc_hd__a31o_1
+   Generating output for cell sky130_fd_sc_hd__or3_2
+   Generating output for cell sky130_fd_sc_hd__xnor2_2
+   Generating output for cell sky130_fd_sc_hd__and3_1
+   Generating output for cell sky130_fd_sc_hd__nor2_1
+   Generating output for cell sky130_fd_sc_hd__and2_1
+   Generating output for cell sky130_fd_sc_hd__nand2_1
+   Generating output for cell sky130_fd_sc_hd__o21ai_1
+   Generating output for cell sky130_fd_sc_hd__nand3_1
+   Generating output for cell sky130_fd_sc_hd__o211a_1
+   Generating output for cell sky130_fd_sc_hd__or3b_2
+   Generating output for cell sky130_fd_sc_hd__a2111o_4
+   Generating output for cell sky130_fd_sc_hd__or2_1
+   Generating output for cell sky130_fd_sc_hd__and4bb_1
+   Generating output for cell sky130_fd_sc_hd__o2bb2a_1
+   Generating output for cell sky130_fd_sc_hd__and3_2
+   Generating output for cell sky130_fd_sc_hd__a21o_1
+   Generating output for cell sky130_fd_sc_hd__xor2_1
+   Generating output for cell sky130_fd_sc_hd__a21oi_2
+   Generating output for cell sky130_fd_sc_hd__o21a_1
+   Generating output for cell sky130_fd_sc_hd__a211o_1
+   Generating output for cell sky130_fd_sc_hd__or2b_1
+   Generating output for cell sky130_fd_sc_hd__nor3_1
+   Generating output for cell sky130_fd_sc_hd__o21ba_1
+   Generating output for cell sky130_fd_sc_hd__nand3_2
+   Generating output for cell sky130_fd_sc_hd__a211oi_2
+   Generating output for cell sky130_fd_sc_hd__o21bai_1
+   Generating output for cell sky130_fd_sc_hd__or3b_1
+   Generating output for cell sky130_fd_sc_hd__mux2_1
+   Generating output for cell sky130_fd_sc_hd__a21bo_1
+   Generating output for cell sky130_fd_sc_hd__and3b_1
+   Generating output for cell sky130_fd_sc_hd__o31ai_1
+   Generating output for cell sky130_fd_sc_hd__o211ai_4
+   Generating output for cell sky130_fd_sc_hd__a41o_1
+   Generating output for cell sky130_fd_sc_hd__nand4_1
+   Generating output for cell sky130_fd_sc_hd__a21boi_1
+   Generating output for cell sky130_fd_sc_hd__dfrtp_1
+   Generating output for cell sky130_fd_sc_hd__a22o_1
+   Generating output for cell sky130_fd_sc_hd__buf_1
+   Generating output for cell sky130_fd_sc_hd__a211oi_1
+   Generating output for cell sky130_fd_sc_hd__buf_4
+   Generating output for cell sky130_fd_sc_hd__o211ai_2
+   Generating output for cell sky130_fd_sc_hd__o211ai_1
+   Generating output for cell sky130_fd_sc_hd__o22a_1
+   Generating output for cell sky130_fd_sc_hd__o21ai_2
+   Generating output for cell sky130_fd_sc_hd__a22oi_1
+   Generating output for cell sky130_fd_sc_hd__and4_1
+   Generating output for cell sky130_fd_sc_hd__o221a_1
+   Generating output for cell sky130_fd_sc_hd__a21boi_2
+   Generating output for cell sky130_fd_sc_hd__or4bb_2
+   Generating output for cell sky130_fd_sc_hd__a2bb2o_1
+   Generating output for cell sky130_fd_sc_hd__nand4_2
+   Generating output for cell sky130_fd_sc_hd__a32o_1
+   Generating output for cell sky130_fd_sc_hd__and2b_2
+   Generating output for cell sky130_fd_sc_hd__a32oi_4
+   Generating output for cell sky130_fd_sc_hd__a311o_1
+   Generating output for cell sky130_fd_sc_hd__dfrtp_2
+   Generating output for cell sky130_fd_sc_hd__nor2_2
+   Generating output for cell sky130_fd_sc_hd__or4bb_1
+   Generating output for cell sky130_fd_sc_hd__o32ai_1
+   Generating output for cell sky130_fd_sc_hd__a31oi_1
+   Generating output for cell sky130_fd_sc_hd__a32oi_2
+   Generating output for cell sky130_fd_sc_hd__nor3_2
+   Generating output for cell sky130_fd_sc_hd__a22oi_2
+   Generating output for cell sky130_fd_sc_hd__a31oi_2
+   Generating output for cell sky130_fd_sc_hd__a31oi_4
+   Generating output for cell sky130_fd_sc_hd__nand3b_2
+   Generating output for cell sky130_fd_sc_hd__o22ai_4
+   Generating output for cell sky130_fd_sc_hd__nand4_4
+   Generating output for cell sky130_fd_sc_hd__nand2_2
+   Generating output for cell sky130_fd_sc_hd__o21a_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_8
+   Generating output for cell sky130_fd_sc_hd__and4b_1
+   Generating output for cell sky130_fd_sc_hd__o21bai_4
+   Generating output for cell sky130_fd_sc_hd__dlygate4sd3_1
+   Generating output for cell sky130_fd_sc_hd__o21bai_2
+   Generating output for cell sky130_fd_sc_hd__a211o_2
+   Generating output for cell sky130_fd_sc_hd__a32o_2
+   Generating output for cell sky130_fd_sc_hd__nand3_4
+   Generating output for cell sky130_fd_sc_hd__or3b_4
+   Generating output for cell sky130_fd_sc_hd__a41o_2
+   Generating output for cell sky130_fd_sc_hd__clkbuf_2
+   Generating output for cell sky130_fd_sc_hd__xnor2_4
+   Generating output for cell sky130_fd_sc_hd__o31ai_2
+   Generating output for cell sky130_fd_sc_hd__clkdlybuf4s25_1
+   Generating output for cell sky130_fd_sc_hd__a21oi_4
+   Generating output for cell sky130_fd_sc_hd__a311o_2
+   Generating output for cell sky130_fd_sc_hd__and2_2
+   Generating output for cell sky130_fd_sc_hd__dlymetal6s2s_1
+   Generating output for cell sky130_fd_sc_hd__o32ai_2
+   Generating output for cell sky130_fd_sc_hd__xor2_4
+   Generating output for cell sky130_fd_sc_hd__a311o_4
+   Generating output for cell sky130_fd_sc_hd__mux2_2
+   Generating output for cell sky130_fd_sc_hd__nor2_4
+   Generating output for cell sky130_fd_sc_hd__nand3b_4
+   Generating output for cell sky130_fd_sc_hd__a21o_2
+   Generating output for cell sky130_fd_sc_hd__o21ai_4
+   Generating output for cell sky130_fd_sc_hd__o31ai_4
+   Generating output for cell systolic_array_fp16
+[INFO]: GDS Write Complete
